@@ -1,0 +1,53 @@
+warning: mark_as_command is obsolete and will be removed from a future version of Octave
++++++++++++++++++++++++++++++++
+test02: filein and rootname --> w2k-lda-na.dat, test02-c01-
++++++++++++++++++++++++++++++++
+readEVdata: Reading input file -> w2k-lda-na.dat
+Input volume unit: bohr^3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [159.9086000000 , 319.8173000000] dV = 159.9087000000
+  E-range (hartree) : [-161.7088550000 , -161.7039449000] dE = 0.0049101000
+  Number of data points: 61
+  Number of electrons: 11
+
+Fit to polynomials of eulerian strain
+Select the best number of polynomials to average:
+Checking err(X) = (std(X)/mean(X))^2 for:
+ --n-- --volume-- ----B----- ----B1p--- ----B2p---
+     4  7.764e-10  2.685e-06  1.460e-06  2.640e-03
+     5  4.736e-10  2.009e-06  9.780e-07  2.109e-03
+     6  3.527e-10  1.514e-06  8.320e-07  1.547e-03
+     7  4.655e-10  1.229e-06  3.118e-06  1.501e-03
+     8  4.490e-10  1.086e-06  3.254e-06  1.874e-03
+     9  4.063e-10  9.599e-07  2.917e-06  1.794e-03
+    10  4.599e-10  8.313e-07  5.908e-06  3.337e-03
+
+
+avgpolyfit: AVERAGE OF eulerian STRAIN POLYNOMIALS
+Volume reference (V0): 239.863000
+Range of degrees: 2--10
+Number of polynomials: 9
+
+Properties at the minimum of each polynomial:
+--i- npol data npar --SSerr-- ---w---- ----Vmin--- ----Emin--- ----Bmin--- ---B1min--- ---B2min---
+   1    3   61    4  8.65e-12 0.138405  224.457562 -161.708856    9.163736    3.730992 -0.361829533 0.304202700
+   2    4   61    5  7.98e-12 0.136732  224.451813 -161.708856    9.163018    3.736722 -0.359771200 0.293634210
+   3    5   61    6  7.90e-12 0.134412  224.450837 -161.708856    9.164838    3.738213 -0.365880463 0.293260394
+   4    6   61    7  7.40e-12 0.133058  224.444541 -161.708856    9.162432    3.750303 -0.353090715 0.235454328
+   5    7   61    8  7.37e-12 0.130907  224.445704 -161.708856    9.160572    3.747259 -0.341629796 0.245756656
+   6    8   61    9  7.36e-12 0.128736  224.446565 -161.708856    9.161242    3.744563 -0.347399272 0.269324175
+   7    9   61   10  7.16e-12 0.127162  224.442281 -161.708856    9.167272    3.761747 -0.405833579 0.143169052
+   8    2   61    3  1.10e-10 0.070587  224.444566 -161.708857    9.194978    3.740368 -0.402030944 0.322548165
+   9    1   61    2  2.44e-08 0.000000  223.719254 -161.708856    9.221046    4.000000 -0.421740528 0.365893864
+
+Average properties (weighted polynomials):
+------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)
+-mean-  224.448311 -161.708856    9.165532    3.743765   -0.364861    0.260815760
+stdvev    0.004813    0.000002    0.008357    0.009100    0.021078    0.051989496
+E(V) plot created in: test02-c01-ev.eps
+p(V) plot created in: test02-c01-pv.eps
+B(p) plot created in: test02-c01-bp.eps
+B(V) plot created in: test02-c01-bv.eps
+B1(p) plot created in: test02-c01-b1p.eps
+B*B2p(p) plot created in: test02-c01-bb2p.eps

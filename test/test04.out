@@ -1,0 +1,37 @@
+warning: mark_as_command is obsolete and will be removed from a future version of Octave
+El -Eceil- --V0-(bohr^3)--- --E0-(hartree)-- ----B0-(GPa)---- ------B1p0------ --B2p0-(1/GPa)--
+readEVdata: Reading input file -> w2k-lda-na.dat
+Input volume unit: bohr^3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [159.9086000000 , 319.8173000000] dV = 159.9087000000
+  E-range (hartree) : [-161.7088550000 , -161.7039449000] dE = 0.0049101000
+  Number of data points: 61
+  Number of electrons: 11
+
+Na    -161 224.4521(42)     -0.708856(1)     9.169(11)        3.7361(34)       -0.369(14)      
+readEVdata: Reading input file -> w2k-lda-k.dat
+Input volume unit: bohr^3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [243.6753000000 , 728.0767000000] dV = 484.4014000000
+  E-range (hartree) : [-600.6042370500 , -600.5888263500] dE = 0.0154107000
+  Number of data points: 100
+  Number of electrons: 19
+
+K     -600 432.2(11)        -0.604191(15)    4.485(22)        3.826(90)        -0.871(63)      
+readEVdata: Reading input file -> w2k-lda-rb.dat
+Input volume unit: bohr^3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [188.1585000000 , 1004.8819000000] dV = 816.7234000000
+  E-range (hartree) : [-2977.9368343500 , -2977.8858850500] dE = 0.0509493000
+  Number of data points: 101
+  Number of electrons: 37
+
+Rb   -2977 523.9(17)        -0.936835(14)    3.573(15)        3.721(82)        -1.190(59)      
+E(V/V_0) plot created in: w2k-lda-ev.eps
+B(p) plot created in: w2k-lda-bp.eps
+B(V/V_0) plot created in: w2k-lda-bv.eps
+B1p(p) plot created in: w2k-lda-b1p.eps
+B2pB(p) plot created in: w2k-lda-b2pbp.eps

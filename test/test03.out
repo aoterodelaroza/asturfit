@@ -1,0 +1,265 @@
+warning: mark_as_command is obsolete and will be removed from a future version of Octave
++++++++++++++++++++++++++++++++
+test03: filein and rootname --> w2k-lda-na.dat, test03-c01-
++++++++++++++++++++++++++++++++
+readEVdata: Reading input file -> w2k-lda-na.dat
+Input volume unit: bohr^3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [159.9086000000 , 319.8173000000] dV = 159.9087000000
+  E-range (hartree) : [-161.7088550000 , -161.7039449000] dE = 0.0049101000
+  Number of data points: 61
+  Number of electrons: 11
+
+
+Non-linear fitting: BM3: 3rd order Birch-Murnaghan EOS
+Parameters (4) start / converged
+E0 (Hy)               -161.708856      -161.708857
+V0 (bohr^3)            224.445371       224.444565
+B0 (GPa)                 9.164446         9.194978
+B1p                      3.752432         3.740369
+Convergence (1=yes)? 1
+Iterations: 3
+SSerr, SStot, R2, 1-R2: 1.095798e-10 1.001433e-04 0.999998905770 1.09e-06
+Correlation matrix of the parameters:
+     1.000000
+     0.028172     1.000000
+    -0.740135    -0.221124     1.000000
+     0.035197    -0.913891     0.136908     1.000000
+
+Non-linear fitting: BM4: 4th order Birch-Murnaghan EOS
+Parameters (5) start / converged
+E0 (Hy)               -161.708856      -161.708856
+V0 (bohr^3)            224.445371       224.457562
+B0 (GPa)                 9.164446         9.163736
+B1p                      3.752432         3.730992
+B2p (1/GPa)             -0.371174        -0.361830
+Convergence (1=yes)? 1
+Iterations: 4
+SSerr, SStot, R2, 1-R2: 8.651294e-12 1.001433e-04 0.999999913611 8.64e-08
+Correlation matrix of the parameters:
+           NA
+           NA           NA
+           NA           NA           NA
+           NA           NA           NA           NA
+           NA           NA           NA           NA           NA
+
+Non-linear fitting: BM5: 5th order Birch-Murnaghan EOS
+Parameters (6) start / converged
+E0 (Hy)               -161.708856      -161.708856
+V0 (bohr^3)            224.445371       224.451813
+B0 (GPa)                 9.164446         9.163018
+B1p                      3.752432         3.736723
+B2p (1/GPa)             -0.371174        -0.359771
+B3p (1/GPa^2)            0.179508         0.293634
+Convergence (1=yes)? 1
+Iterations: 5
+SSerr, SStot, R2, 1-R2: 7.983095e-12 1.001433e-04 0.999999920283 7.97e-08
+Correlation matrix of the parameters:
+           NA
+           NA           NA
+           NA           NA           NA
+           NA           NA           NA           NA
+           NA           NA           NA           NA           NA
+           NA           NA           NA           NA           NA           NA
+
+Non-linear fitting: PT3: 3rd order Poirier-Tarantola EOS
+Parameters (4) start / converged
+E0 (Hy)               -161.708856      -161.708865
+V0 (bohr^3)            224.445371       224.509208
+B0 (GPa)                 9.164446         9.354298
+B1p                      3.752432         3.690448
+Convergence (1=yes)? 1
+Iterations: 3
+SSerr, SStot, R2, 1-R2: 4.139718e-09 1.001433e-04 0.999958662075 4.13e-05
+Correlation matrix of the parameters:
+     1.000000
+     0.145870     1.000000
+    -0.672814    -0.593902     1.000000
+    -0.092471    -0.908607     0.562711     1.000000
+
+Non-linear fitting: PT4: 4th order Poirier-Tarantola EOS
+Parameters (5) start / converged
+E0 (Hy)               -161.708856      -161.708856
+V0 (bohr^3)            224.445371       224.430182
+B0 (GPa)                 9.164446         9.167944
+B1p                      3.752432         3.758360
+B2p (1/GPa)             -0.371174        -0.373465
+Convergence (1=yes)? 1
+Iterations: 4
+SSerr, SStot, R2, 1-R2: 1.659922e-11 1.001433e-04 0.999999834245 1.66e-07
+Correlation matrix of the parameters:
+           NA
+           NA           NA
+           NA           NA           NA
+           NA           NA           NA           NA
+           NA           NA           NA           NA           NA
+
+Non-linear fitting: PT5: 5th order Poirier-Tarantola EOS
+Parameters (6) start / converged
+E0 (Hy)               -161.708856      -161.708856
+V0 (bohr^3)            224.445371       224.451250
+B0 (GPa)                 9.164446         9.162840
+B1p                      3.752432         3.737484
+B2p (1/GPa)             -0.371174        -0.359199
+B3p (1/GPa^2)            0.179508         0.290944
+Convergence (1=yes)? 1
+Iterations: 5
+SSerr, SStot, R2, 1-R2: 7.966055e-12 1.001433e-04 0.999999920453 7.95e-08
+Correlation matrix of the parameters:
+           NA
+           NA           NA
+           NA           NA           NA
+           NA           NA           NA           NA
+           NA           NA           NA           NA           NA
+           NA           NA           NA           NA           NA           NA
+
+Non-linear fitting: Murn: Murnaghan EOS
+Parameters (4) start / converged
+E0 (Hy)               -161.708856      -161.708843
+V0 (bohr^3)            224.445371       224.501825
+B0 (GPa)                 9.164446         8.896845
+B1p                      3.752432         3.723835
+Convergence (1=yes)? 1
+Iterations: 3
+SSerr, SStot, R2, 1-R2: 7.386052e-09 1.001433e-04 0.999926245200 7.38e-05
+Correlation matrix of the parameters:
+     1.000000
+     0.013242     1.000000
+    -0.743019    -0.158838     1.000000
+     0.048771    -0.919566     0.072011     1.000000
+
+Non-linear fitting: ap2: Holzapfel AP2 EOS
+Parameters (4) start / converged
+E0 (Hy)               -161.708856      -161.708857
+V0 (bohr^3)            224.445371       224.456316
+B0 (GPa)                 9.164446         9.185212
+B1p                      3.752432         3.730958
+Convergence (1=yes)? 1
+Iterations: 4
+SSerr, SStot, R2, 1-R2: 6.034925e-11 1.001433e-04 0.999999397371 6.03e-07
+Correlation matrix of the parameters:
+     1.000000
+     0.070047     1.000000
+    -0.714818    -0.388826     1.000000
+    -0.011556    -0.916022     0.325716     1.000000
+
+
++++++++++++++++++++++++++++++++++++++++++
+Fit to polynomials of eulerian strain
++++++++++++++++++++++++++++++++++++++++++
+Select the best number of polynomials to average:
+Checking err(X) = (std(X)/mean(X))^2 for:
+ --n-- --volume-- ----B----- ----B1p--- ----B2p---
+     4  7.764e-10  2.685e-06  1.460e-06  2.640e-03
+     5  4.736e-10  2.009e-06  9.780e-07  2.109e-03
+     6  3.527e-10  1.514e-06  8.320e-07  1.547e-03
+     7  4.655e-10  1.229e-06  3.118e-06  1.501e-03
+
+
+avgpolyfit: AVERAGE OF eulerian STRAIN POLYNOMIALS
+Volume reference (V0): 239.863000
+Range of degrees: 2--7
+Number of polynomials: 6
+
+Properties at the minimum of each polynomial:
+--i- npol data npar --SSerr-- ---w---- ----Vmin--- ----Emin--- ----Bmin--- ---B1min--- ---B2min---
+   1    3   61    4  8.65e-12 0.225007  224.457562 -161.708856    9.163736    3.730992 -0.361829533 0.304202700
+   2    4   61    5  7.98e-12 0.222377  224.451813 -161.708856    9.163018    3.736722 -0.359771200 0.293634210
+   3    5   61    6  7.90e-12 0.218725  224.450837 -161.708856    9.164838    3.738213 -0.365880463 0.293260394
+   4    6   61    7  7.40e-12 0.216593  224.444541 -161.708856    9.162432    3.750303 -0.353090715 0.235454328
+   5    2   61    3  1.10e-10 0.117298  224.444566 -161.708857    9.194978    3.740368 -0.402030944 0.322548165
+   6    1   61    2  2.44e-08 0.000000  223.719254 -161.708856    9.221046    4.000000 -0.421740528 0.365893864
+
+Average properties (weighted polynomials):
+------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)
+-mean-  224.450468 -161.708856    9.167200    3.739128   -0.365081    0.286720639
+stdvev    0.004843    0.000000    0.010161    0.006603    0.014145    0.028435411
+
+
++++++++++++++++++++++++++++++++++++++++++
+Fit to polynomials of natural strain
++++++++++++++++++++++++++++++++++++++++++
+Select the best number of polynomials to average:
+Checking err(X) = (std(X)/mean(X))^2 for:
+ --n-- --volume-- ----B----- ----B1p--- ----B2p---
+     4  6.236e-13  2.079e-09  1.643e-09  1.741e-06
+     5  2.201e-09  7.747e-08  7.752e-06  3.793e-04
+
+
+avgpolyfit: AVERAGE OF natural STRAIN POLYNOMIALS
+Volume reference (V0): 239.863000
+Range of degrees: 2--5
+Number of polynomials: 4
+
+Properties at the minimum of each polynomial:
+--i- npol data npar --SSerr-- ---w---- ----Vmin--- ----Emin--- ----Bmin--- ---B1min--- ---B2min---
+   1    4   61    5  7.97e-12 0.513665  224.451250 -161.708856    9.162840    3.737484 -0.359199066 0.290944363
+   2    3   61    4  1.66e-11 0.486335  224.430182 -161.708856    9.167944    3.758360 -0.373465193 0.269366252
+   3    2   61    3  4.14e-09 0.000000  224.509200 -161.708865    9.354300    3.690450 -0.593103943 0.523187479
+   4    1   61    2  1.06e-06 0.000000  229.350508 -161.708846    8.910497    2.000000 -0.112227181 0.050379761
+
+Average properties (weighted polynomials):
+------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)
+-mean-  224.441004 -161.708856    9.165322    3.747636   -0.366137    0.280450162
+stdvev    0.010530    0.000002    0.002551    0.010434    0.007130    0.010785025
+
+
++++++++++++++++++++++++++++++++++++++++++
+Fit to polynomials of lagrangian strain
++++++++++++++++++++++++++++++++++++++++++
+Select the best number of polynomials to average:
+Checking err(X) = (std(X)/mean(X))^2 for:
+ --n-- --volume-- ----B----- ----B1p--- ----B2p---
+     4  2.783e-06  6.630e-04  5.074e-03  2.877e-02
+     5  7.870e-08  2.655e-05  1.921e-04  1.733e-01
+     6  1.291e-08  1.690e-06  1.106e-04  8.634e-03
+     7  8.245e-09  2.160e-06  7.068e-05  1.746e-02
+
+
+avgpolyfit: AVERAGE OF lagrangian STRAIN POLYNOMIALS
+Volume reference (V0): 239.863000
+Range of degrees: 2--7
+Number of polynomials: 6
+
+Properties at the minimum of each polynomial:
+--i- npol data npar --SSerr-- ---w---- ----Vmin--- ----Emin--- ----Bmin--- ---B1min--- ---B2min---
+   1    6   61    7  7.97e-12 0.392741  224.449854 -161.708856    9.166362    3.738428 -0.377899049 0.315328276
+   2    5   61    6  1.00e-11 0.389224  224.457058 -161.708855    9.154888    3.726827 -0.320225627 0.295433325
+   3    4   61    5  6.84e-11 0.218034  224.404691 -161.708855    9.130477    3.807968 -0.263328649 -0.016582589
+   4    3   61    4  3.12e-09 0.000000  224.120515 -161.708861    9.343132    4.046981 -0.811481020 0.309250500
+   5    1   61    2  4.83e-06 0.000000  235.017169 -161.708815    8.747075   -0.000000 0.012702659 -0.000000000
+   6    2   61    3  1.37e-07 0.000000  225.316481 -161.708903   10.119219    3.147934 -1.279378433 1.321500679
+
+Average properties (weighted polynomials):
+------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)
+-mean-  224.442811 -161.708855    9.154072    3.749075   -0.330471    0.235216691
+stdvev    0.020379    0.000000    0.013452    0.031518    0.043672    0.133251315
+
+
++++++++++++++++++++++++++++++++++++++++++
+Fit to polynomials of infinitesimal strain
++++++++++++++++++++++++++++++++++++++++++
+Select the best number of polynomials to average:
+Checking err(X) = (std(X)/mean(X))^2 for:
+ --n-- --volume-- ----B----- ----B1p--- ----B2p---
+     4  7.857e-14  7.134e-07  2.511e-09  7.298e-04
+     5  8.160e-13  6.068e-07  8.465e-09  6.299e-04
+
+
+avgpolyfit: AVERAGE OF infinitesimal STRAIN POLYNOMIALS
+Volume reference (V0): 239.863000
+Range of degrees: 2--5
+Number of polynomials: 4
+
+Properties at the minimum of each polynomial:
+--i- npol data npar --SSerr-- ---w---- ----Vmin--- ----Emin--- ----Bmin--- ---B1min--- ---B2min---
+   1    3   61    4  7.96e-12 0.350463  224.451959 -161.708856    9.163457    3.736643 -0.361295496 0.294585227
+   2    4   61    5  7.96e-12 0.344776  224.451488 -161.708856    9.163486    3.737117 -0.361373127 0.293865418
+   3    2   61    3  3.32e-11 0.304761  224.451833 -161.708856    9.178986    3.736267 -0.381368808 0.310714172
+   4    1   61    2  1.92e-07 0.000000  226.517591 -161.708854    9.046481    3.000000 -0.245644943 0.162921882
+
+Average properties (weighted polynomials):
+------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)
+-mean-  224.451758 -161.708856    9.168200    3.736692   -0.367440    0.299252532
+stdvev    0.000203    0.000000    0.007142    0.000344    0.009222    0.007594496

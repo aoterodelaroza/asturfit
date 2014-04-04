@@ -1,0 +1,68 @@
+warning: mark_as_command is obsolete and will be removed from a future version of Octave
+readEVdata: Reading input file -> mgo-pbe-b1.dat
+Input volume unit: bohr^3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [40.0000000000 , 160.0000000000] dV = 120.0000000000
+  E-range (hartree) : [-73.6398262300 , -72.5628226350] dE = 1.0770035950
+  Number of data points: 174
+  Number of electrons: 20
+
+readEVdata: Reading input file -> mgo-pbe-b2.dat
+Input volume unit: bohr^3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [40.0000000000 , 160.0000000000] dV = 120.0000000000
+  E-range (hartree) : [-73.5861350800 , -72.6637677800] dE = 0.9223673000
+  Number of data points: 174
+  Number of electrons: 20
+
+
+
+avgpolyfit: AVERAGE OF eulerian STRAIN POLYNOMIALS
+Volume reference (V0): 100.206575
+Range of degrees: 2--10
+Number of polynomials: 9
+
+Properties at the minimum of each polynomial:
+--i- npol data npar --SSerr-- ---w---- ----Vmin--- ----Emin--- ----Bmin--- ---B1min--- ---B2min---
+   1    9  174   10  3.28e-09 0.155487  130.083725  -73.639829  150.245835    4.132762 -0.024476706 0.000822115
+   2    4  174    5  6.88e-09 0.155055  130.075053  -73.639836  150.688269    4.128285 -0.028805004 0.001554848
+   3    5  174    6  6.15e-09 0.154367  130.072355  -73.639834  150.654268    4.133073 -0.029051106 0.001571710
+   4    8  174    9  4.38e-09 0.153700  130.083870  -73.639832  150.436839    4.122357 -0.026151974 0.001218089
+   5    7  174    8  5.34e-09 0.152806  130.079379  -73.639834  150.584150    4.124548 -0.027835322 0.001452575
+   6    6  174    7  6.12e-09 0.152773  130.073437  -73.639834  150.653180    4.131586 -0.028927833 0.001561952
+   7    3  174    4  1.11e-07 0.075811  130.074106  -73.639860  151.230678    4.100072 -0.027852493 0.001490306
+   8    2  174    3  3.06e-05 0.000000  129.675717  -73.640183  158.699614    3.945654 -0.024180879 0.001200231
+   9    1  174    2  1.65e-04 0.000000  130.763996  -73.639981  149.677336    4.000000 -0.025981815 0.001388684
+
+Average properties (weighted polynomials):
+------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)
+-mean-  130.077682  -73.639835  150.595433    4.126603   -0.027561    0.001372325
+stdvev    0.004602    0.000007    0.236350    0.008566    0.001634    0.000263747
+
+
+avgpolyfit: AVERAGE OF eulerian STRAIN POLYNOMIALS
+Volume reference (V0): 100.206575
+Range of degrees: 2--10
+Number of polynomials: 9
+
+Properties at the minimum of each polynomial:
+--i- npol data npar --SSerr-- ---w---- ----Vmin--- ----Emin--- ----Bmin--- ---B1min--- ---B2min---
+   1    5  174    6  8.19e-09 0.150774  126.889683  -73.586136  140.254032    4.116747 -0.030281281 0.001746843
+   2    6  174    7  7.93e-09 0.150057  126.892975  -73.586136  140.236635    4.113178 -0.029912071 0.001714754
+   3    7  174    8  7.91e-09 0.149193  126.893922  -73.586136  140.219648    4.112405 -0.029712424 0.001691688
+   4    4  174    5  1.33e-08 0.148822  126.879757  -73.586133  140.210111    4.129221 -0.031020116 0.001800950
+   5    8  174    9  7.68e-09 0.148534  126.893102  -73.586137  140.289366    4.110716 -0.030357410 0.001806650
+   6    9  174   10  7.67e-09 0.147694  126.892681  -73.586137  140.275116    4.112468 -0.030285186 0.001771393
+   7    3  174    4  1.33e-07 0.104925  126.891025  -73.586158  140.679686    4.097070 -0.029822308 0.001715519
+   8    2  174    3  1.95e-05 0.000000  126.650856  -73.586450  146.195534    3.958851 -0.026330719 0.001424154
+   9    1  174    2  7.61e-05 0.000000  127.334265  -73.586231  140.391359    4.000000 -0.027700344 0.001578464
+
+Average properties (weighted polynomials):
+------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)
+-mean-  126.890424  -73.586138  140.292779    4.113828   -0.030215    0.001751074
+stdvev    0.004655    0.000007    0.135163    0.008252    0.000410    0.000041826
+See the E(V) curve in the file: test07-ev.eps
+See the H(p) curve in the file: test07-hp.eps
+See the DifH(p) curve in the file: test07-dhp.eps

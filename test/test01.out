@@ -1,0 +1,9 @@
+warning: mark_as_command is obsolete and will be removed from a future version of Octave
+Test 1 (test01a.dat): pass 
+Test 2 (test01b.dat): pass 
+Test 3 (test01c.dat): pass 
+Test 4 (test01d.dat): pass 
+Test 5 (test01e.dat): pass 
+Test 6 (test01f.dat): pass 
+Test 7 (test01g.dat): pass 
+Test 8 (test01h.dat): pass 

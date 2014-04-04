@@ -1,0 +1,15 @@
+warning: mark_as_command is obsolete and will be removed from a future version of Octave
+readEVdata: Reading input file -> mgo-sety1.dat
+Input volume unit: bohr3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [71.5195563798 , 143.0391127595] dV = 71.5195563796
+  E-range (hartree) : [-17.1721409750 , -17.0038769900] dE = 0.1682639850
+  Number of data points: 129
+  Number of electrons: 20
+
+-n- data --V-(bohr^3)-- --E-(hartree)- ---B-(GPa)----  ----B'----  B''(1/GPa)-
+  1  129  124.82338(86)  -17.172142(0)  169.316(22)    4.1629(34) -0.02516(30)
+  2   65  124.82318(82)  -17.172142(0)  169.313(21)    4.1637(30) -0.02520(27)
+  4   33  124.82332(87)  -17.17214(NaN) 169.309(19)    4.1643(31) -0.02522(32)
+  8   17  124.8234(10)   -17.172142(0)  169.327(29)    4.1623(31) -0.02522(45)

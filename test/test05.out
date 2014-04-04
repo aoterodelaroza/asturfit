@@ -1,0 +1,80 @@
+warning: mark_as_command is obsolete and will be removed from a future version of Octave
+readEVdata: Reading input file -> mgo-sety1.dat
+Input volume unit: bohr3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [71.5195563798 , 143.0391127595] dV = 71.5195563796
+  E-range (hartree) : [-17.1721409750 , -17.0038769900] dE = 0.1682639850
+  Number of data points: 129
+  Number of electrons: 20
+
+
+
+avgpolyfit: AVERAGE OF eulerian STRAIN POLYNOMIALS
+Volume reference (V0): 107.279335
+Range of degrees: 2--16
+Number of polynomials: 15
+
+Properties at the minimum of each polynomial:
+--i- npol data npar --SSerr-- ---w---- ----Vmin--- ----Emin--- ----Bmin--- ---B1min--- ---B2min---
+   1    4  129    5  5.11e-11 0.080496  124.824303  -17.172142  169.303010    4.160528 -0.024669721 0.001192786
+   2    5  129    6  4.96e-11 0.079837  124.823843  -17.172142  169.308984    4.161944 -0.024887896 0.001212891
+   3    6  129    7  4.65e-11 0.079399  124.823413  -17.172142  169.334344    4.162531 -0.025427966 0.001295810
+   4    7  129    8  4.65e-11 0.078682  124.823407  -17.172142  169.333353    4.162637 -0.025412950 0.001290615
+   5    8  129    9  4.65e-11 0.077973  124.823471  -17.172142  169.334356    4.162043 -0.025389155 0.001305273
+   6    9  129   10  4.63e-11 0.077297  124.823722  -17.172142  169.328200    4.159890 -0.024936147 0.001312367
+   7   10  129   11  4.46e-11 0.076881  124.824076  -17.172142  169.283576    4.158469 -0.022604034 0.000980252
+   8   11  129   12  4.36e-11 0.076400  124.824369  -17.172142  169.319792    4.151925 -0.024117786 0.001618054
+   9   12  129   13  4.36e-11 0.075753  124.824405  -17.172142  169.320243    4.151302 -0.024090432 0.001655829
+  10   13  129   14  4.35e-11 0.075114  124.824477  -17.172142  169.317012    4.150121 -0.023720520 0.001686064
+  11   15  129   16  3.97e-11 0.074740  124.823359  -17.172142  169.245097    4.182358 -0.018771293 -0.002513476
+  12   14  129   15  4.33e-11 0.074535  124.824368  -17.172142  169.349621    4.150416 -0.026753469 0.002177792
+  13    3  129    4  1.91e-10 0.072893  124.821340  -17.172141  169.268283    4.171190 -0.025412395 0.001238681
+  14    2  129    3  2.14e-08 0.000000  124.823661  -17.172156  170.041394    4.115715 -0.023629506 0.001146551
+  15    1  129    2  2.46e-06 0.000000  124.603461  -17.172260  175.758259    4.000000 -0.022126351 0.001007127
+
+Average properties (weighted polynomials):
+------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)
+-mean-  124.823742  -17.172142  169.311513    4.160394   -0.024335    0.001116320
+stdvev    0.000789    0.000000    0.028197    0.008550    0.001853    0.001071824
+readEVdata: Reading input file -> mgo-sety1-compress.dat
+Input volume unit: bohr3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [10.0000000000 , 71.5195563798] dV = 61.5195563798
+  E-range (hartree) : [-17.0038769900 , -5.3271718400] dE = 11.6767051500
+  Number of data points: 129
+  Number of electrons: 20
+
+readEVdata: Reading input file -> mgo-sety1-expand.dat
+Input volume unit: bohr3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [143.0391127595 , 800.0000000000] dV = 656.9608872405
+  E-range (hartree) : [-17.1660964600 , -16.7892819350] dE = 0.3768145250
+  Number of data points: 129
+  Number of electrons: 20
+
+pin =
+
+  -1.7172e+01
+   1.2482e+02
+   5.7548e-03
+   4.1604e+00
+
+
+(nlf) Evaluating Vinet: Vinet EOS
+Parameters (4)
+E0 (Hy)                -17.172142
+V0 (bohr^3)            124.823742
+B0 (GPa)               169.311513
+B1p                      4.160394
+SSerr, SStot, R2, 1-R2: 1.608339e+02 1.301993e+03 0.876470974680 1.24e-01
+
+(nlf) Evaluating ap2: Holzapfel AP2 EOS
+Parameters (4)
+E0 (Hy)                -17.172142
+V0 (bohr^3)            124.823742
+B0 (GPa)               169.311513
+B1p                      4.160394
+SSerr, SStot, R2, 1-R2: 2.486990e+00 1.301993e+03 0.998089858713 1.91e-03

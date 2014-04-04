@@ -1,0 +1,129 @@
+readPVTdata: Reading input file -> mgo.eos
+Input volume unit: bohr^3
+Input pressure unit: gpa
+Input temperature unit: k
+* Range of the PVT properties
+  p (GPa) : [0.00000--500.00000] dP = 500.00000
+  V (bohr^3) : [61.7740000000--153.4343000000] dV = 91.6603000000
+  T (K) : [0.0000--3000.0000] dT = 3000.0000
+  Number of data points: 150785
+  Number of electrons: 20
+  Number of atoms: 2
+
+Elapsed time is 20.5764 seconds.
+Removed 1645 problematic points of 149140
+Fit to a random set of 14941 out of 149140
+
+
+pvavgpolyfit: AVERAGE OF eulerian STRAIN POLYNOMIALS
+Volume reference (Vref): 126.031000
+Range of degrees: 2--10
+Number of polynomials: 9
+The average polynomial has no eq point in the data volume range.
+
+Properties at the reference volume: 126.031000000
+--i- npol data npar --SSerr-- ---w---- ----Bref--- ---B1ref--- ---B2ref---
+   1    6   43    7  6.40e-06 0.229117  161.452638    4.194643 -0.032573074 0.002225925
+   2    7   43    8  6.33e-06 0.224152  161.432657    4.199957 -0.033484353 0.002365674
+   3    8   43    9  6.26e-06 0.219446  161.395063    4.211481 -0.035795848 0.002773485
+   4    9   43   10  6.26e-06 0.214425  161.411378    4.205746 -0.034449332 0.002499361
+   5    5   43    6  6.23e-05 0.067560  161.768055    4.128422 -0.023474356 0.001056658
+   6    4   43    5  1.00e-04 0.042075  161.951562    4.099468 -0.020419405 0.000735440
+   7    3   43    4  2.98e-04 0.003224  161.685008    4.130457 -0.022921762 0.000957363
+   8    2   43    3  1.13e-02 0.000000  160.454793    4.228959 -0.028907330 0.001433865
+   9    1   43    2  1.84e+02 0.000000   75.389891   14.033201 -2.251670987 1.197655480
+
+Average properties at the ref. volume: 126.031000000
+------ --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)
+-mean-  161.469729    4.193225   -0.032730    0.002290243
+stdvev    0.135126    0.027994    0.003912    0.000522586
+
+Non-linear fitting: (Tange etal) Mie-Gruneisen-Debye-3 EOS
+Parameters (4) start / converged
+Theta0 (K)             500.000000       639.718280
+gamma0                   1.500000         2.581905
+aa0                      0.800000         0.646057
+bb0                      1.200000         3.737616
+Convergence (1=yes)? 1
+Iterations: 7
+(Thermal) SSerr, SStot, R2, 1-R2: 2.637913e+02 5.112867e+05 0.999484063900 5.16e-04
+(.Total.) SSerr, SStot, R2, 1-R2: 2.637913e+02 3.006495e+08 0.999999122595 8.77e-07
+Correlation matrix of the parameters:
+     1.000000
+    -0.905575     1.000000
+    -0.940040     0.870756     1.000000
+    -0.136234     0.473424    -0.009258     1.000000
+Total SSerr, SStot, R2, 1-R2: 5.519188e+03 3.153255e+09 0.999998249685 1.75e-06
+Total Max,mean,sdev error: 6.577622e+00 1.128025e-01 1.545276e-01
+Safe region SSerr, SStot, R2, 1-R2: 2.665011e+03 3.153255e+09 0.999999127206 8.73e-07
+Safe region Max,mean,sdev error: 8.545246e-01 1.033183e-01 8.482075e-02
+
+
+***************
+* pvstrainfit * p(V) fitting to the eulerian polynomial strain
+***************
+Reference volume (Vref):  126.031000
+Polynomial degree :     4
+Determin. coef. (R2):   0.999999999638
+Eq. volume (Vmin,err):  125.262500   1
+Pressure at eq. (peq):  1.00188704
+Beq                  :  165.810324
+B1peq                :  4.10796977
+B2peq                :  -0.021997004
+B3peq                :  0.000890534203
+All values in the input units
+
+Non-linear fitting: (Tange etal) Mie-Gruneisen-Debye-3 EOS
+Parameters (4) start / converged
+Theta0 (K)             500.000000       639.713168
+gamma0                   1.500000         2.582060
+aa0                      0.800000         0.646131
+bb0                      1.200000         3.736944
+Convergence (1=yes)? 1
+Iterations: 7
+(Thermal) SSerr, SStot, R2, 1-R2: 2.658640e+02 5.112738e+05 0.999479996870 5.20e-04
+(.Total.) SSerr, SStot, R2, 1-R2: 2.658640e+02 3.006495e+08 0.999999115701 8.84e-07
+Correlation matrix of the parameters:
+     1.000000
+    -0.905596     1.000000
+    -0.940003     0.870647     1.000000
+    -0.136536     0.473655    -0.009221     1.000000
+Total SSerr, SStot, R2, 1-R2: 5.928145e+03 3.153255e+09 0.999998119992 1.88e-06
+Total Max,mean,sdev error: 7.134635e+00 1.138913e-01 1.623089e-01
+Safe region SSerr, SStot, R2, 1-R2: 2.685398e+03 3.153255e+09 0.999999120529 8.79e-07
+Safe region Max,mean,sdev error: 8.774969e-01 1.038274e-01 8.500481e-02
+
+
+***************
+* pvstrainfit * p(V) fitting to the eulerian polynomial strain
+***************
+Reference volume (Vref):  126.031000
+Polynomial degree :     7
+Determin. coef. (R2):   0.999999999992
+Eq. volume (Vmin,err):  125.262500   1
+Pressure at eq. (peq):  0.999975936
+Beq                  :  165.63239
+B1peq                :  4.16313467
+B2peq                :  -0.030465789
+B3peq                :  0.00199326429
+All values in the input units
+
+Non-linear fitting: (Tange etal) Mie-Gruneisen-Debye-3 EOS
+Parameters (4) start / converged
+Theta0 (K)             500.000000       639.717607
+gamma0                   1.500000         2.581922
+aa0                      0.800000         0.646056
+bb0                      1.200000         3.737702
+Convergence (1=yes)? 1
+Iterations: 7
+(Thermal) SSerr, SStot, R2, 1-R2: 2.638032e+02 5.112865e+05 0.999484040443 5.16e-04
+(.Total.) SSerr, SStot, R2, 1-R2: 2.638032e+02 3.006495e+08 0.999999122556 8.77e-07
+Correlation matrix of the parameters:
+     1.000000
+    -0.905575     1.000000
+    -0.940043     0.870768     1.000000
+    -0.136218     0.473410    -0.009249     1.000000
+Total SSerr, SStot, R2, 1-R2: 5.520277e+03 3.153255e+09 0.999998249340 1.75e-06
+Total Max,mean,sdev error: 6.594262e+00 1.128059e-01 1.545485e-01
+Safe region SSerr, SStot, R2, 1-R2: 2.665102e+03 3.153255e+09 0.999999127176 8.73e-07
+Safe region Max,mean,sdev error: 8.532972e-01 1.033293e-01 8.481103e-02

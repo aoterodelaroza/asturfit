@@ -1,0 +1,25 @@
+warning: mark_as_command is obsolete and will be removed from a future version of Octave
+readEVdata: Reading input file -> mgo-sety1.dat
+Input volume unit: bohr3
+Input energy unit: ry
+* Energy and volume ranges 
+  V-range (bohr^3) : [71.5195563798 , 143.0391127595] dV = 71.5195563796
+  E-range (hartree) : [-17.1721409750 , -17.0038769900] dE = 0.1682639850
+  Number of data points: 129
+  Number of electrons: 20
+
+Adding a jump of 0.010000 for V>95.359409
+Adding a jump of -0.011000 for V>119.199261
+DBG(gj3):
+Interpolation error (mean,stddev): 2.173e-05 9.296e-04
+Jumps detected: 2
+       -jump- ----Vjump--- -----Ejump----
+     1      1    95.266284   1.000103e-02
+     2      2   119.292385  -1.100077e-02
+
+Plot file produced: gj3-step3.eps
+See the E(V) curve in the file: test09-ev.eps
+
+Global error of the corrected data:
+Determination coef. (R2, 1 for a exact correction): 9.999999998e-01
+1-R2: 1.87e-10
