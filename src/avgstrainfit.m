@@ -62,7 +62,7 @@ function [cavg,savg] = avgstrainfit (V, E, V0, nmax=16, MODE=1, strain='eulerian
       error('avgstrainfit: V and E must be vectors of the same length!')
    elseif (length(V) < 7)
       error('avgstrainfit: dataset must have at least 7 points!')
-   elseif (MODE != 1 & MODE != 2)
+   elseif (MODE != 1 && MODE != 2)
       error('avgstrainfit: weighting mode must be 1 or 2!')
    endif
 
@@ -124,7 +124,7 @@ function [cavg,savg] = avgstrainfit (V, E, V0, nmax=16, MODE=1, strain='eulerian
    # If the average of polynomials has a minimum, analize the equilibrium
    # geometry.
    # Otherwise analyze the reference volume.
-   if (LOG > 0 | nargout > 1)
+   if (LOG > 0 || nargout > 1)
       [avgmin] = strainmin(cavg, V0, Vrange, strain);
       if (avgmin.err == 0)
          # Analyze and report the equilibrium geometry:
@@ -143,7 +143,7 @@ function [cavg,savg] = avgstrainfit (V, E, V0, nmax=16, MODE=1, strain='eulerian
             ###[smin] = strainmin(pol{k1}.c, V0, Vrange, strain);
             smin = pol{k1}.smin;
             [prop] = straineval(pol{k1}.c, V0, smin.Vmin, strain);
-            if (LOG > 0 & k <= 25)
+            if (LOG > 0 && k <= 25)
                # In the conversion of the bulk modulus and derivatives we
                # assume the units: volume (bohr^3), energy (Hy).
                hybohr3togpa = 2*14710.50498740275538944426;
@@ -165,11 +165,11 @@ function [cavg,savg] = avgstrainfit (V, E, V0, nmax=16, MODE=1, strain='eulerian
          if (LOG > 0)
             printf('\nAverage properties (weighted polynomials):\n');
             printf('------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)\n');
-            printf('-mean- %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n', pmean(1) \
-                  , pmean(2), pmean(3)*hybohr3togpa, pmean(4), pmean(5)/hybohr3togpa \
+            printf('-mean- %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n', pmean(1)...
+                  , pmean(2), pmean(3)*hybohr3togpa, pmean(4), pmean(5)/hybohr3togpa...
                   , pmean(6)/hybohr3togpa^2);
-            printf('stdvev %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n', pstd(1) \
-                  , pstd(2), pstd(3)*hybohr3togpa, pstd(4) \
+            printf('stdvev %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n', pstd(1)...
+                  , pstd(2), pstd(3)*hybohr3togpa, pstd(4)...
                   , pstd(5)/hybohr3togpa, pstd(6)/hybohr3togpa^2);
          endif
       else
@@ -188,7 +188,7 @@ function [cavg,savg] = avgstrainfit (V, E, V0, nmax=16, MODE=1, strain='eulerian
          for k = 1 : npol
             k1 = isrt(k);
             [prop] = straineval(pol{k1}.c, V0, V0, strain);
-            if (LOG > 0 & k <= 25)
+            if (LOG > 0 && k <= 25)
                # In the conversion of the bulk modulus and derivatives we
                # assume the units: volume (bohr^3), energy (Hy).
                hybohr3togpa = 2*14710.50498740275538944426;
@@ -209,11 +209,11 @@ function [cavg,savg] = avgstrainfit (V, E, V0, nmax=16, MODE=1, strain='eulerian
          if (LOG > 0)
             printf('\nAverage properties at the ref. volume: %.9f\n', V0);
             printf('------ ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)\n');
-            printf('-mean- %11.6f %11.6f %11.6f %11.6f %14.9f\n', pmean(2) \
-                  , pmean(3)*hybohr3togpa, pmean(4), pmean(5)/hybohr3togpa \
+            printf('-mean- %11.6f %11.6f %11.6f %11.6f %14.9f\n', pmean(2)...
+                  , pmean(3)*hybohr3togpa, pmean(4), pmean(5)/hybohr3togpa...
                   , pmean(6)/hybohr3togpa^2);
-            printf('stdvev %11.6f %11.6f %11.6f %11.6f %14.9f\n', pstd(2) \
-                  , pstd(3)*hybohr3togpa, pstd(4) \
+            printf('stdvev %11.6f %11.6f %11.6f %11.6f %14.9f\n', pstd(2)...
+                  , pstd(3)*hybohr3togpa, pstd(4)...
                   , pstd(5)/hybohr3togpa, pstd(6)/hybohr3togpa^2);
          endif
       endif
@@ -244,7 +244,7 @@ function [cavg,savg] = avgstrainfit (V, E, V0, nmax=16, MODE=1, strain='eulerian
          printf('Check again your data, please!\n');
       else
          printf('\nSpinodal properties of the average polynomial:\n');
-         printf('(Vsp,psp,Bsp): %.6f %.6f %.6f\n', \
+         printf('(Vsp,psp,Bsp): %.6f %.6f %.6f\n',...
                 spavg.Vsp, spavg.psp*hybohr3togpa, spavg.Bsp*hybohr3togpa);
          printf('\nSpinodal properties of the main polynomials:\n');
          printf('--i- npol data npar --SSerr-- ---w---- ----Vsp---- ----psp---- ----Bsp----\n');
@@ -273,7 +273,7 @@ function [cavg,savg] = avgstrainfit (V, E, V0, nmax=16, MODE=1, strain='eulerian
          printf('Renormalization? Qnew: %.6e\n', Qnew);
          printf('nreject3: %d\n', nreject3);
          printf('avg-Vsp (mean,std): %.6f %.6f\n', pmean3(1), pstd3(1));
-         printf('avg-psp (mean,std): %.6f %.6f\n', \
+         printf('avg-psp (mean,std): %.6f %.6f\n',...
                 pmean3(2)*hybohr3togpa, pstd3(2)*hybohr3togpa);
       endif
    endif

@@ -40,7 +40,7 @@ printf("Chance of finding all outliers is %.6e\n", chance);
 bad = sb.outliers;
 good = 1:length(vn); good(bad) = [];
 fileplot = 'test08-ev.eps';
-plot(vn,sb.Efit,'-r;BS fit;', vn(good),en(good),'ob;good data;' \
+plot(vn,sb.Efit,'-r;BS fit;', vn(good),en(good),'ob;good data;'...
     , vn(bad),en(bad),'om;bad data;', 'markersize', 12);
 xlabel('V (bohr^3)'); ylabel('E (hartree)'); grid('on');
 print(fileplot, '-FHelvetica:24', '-depsc');

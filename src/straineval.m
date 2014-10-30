@@ -46,7 +46,7 @@ function [s] = straineval (c, V0, V, strain='eulerian')
 % Created: September 2010.
 %
 
-   if (nargin < 3 | nargin > 4)
+   if (nargin < 3 || nargin > 4)
       print_usage ();
    endif
 
@@ -92,7 +92,7 @@ function [s] = straineval (c, V0, V, strain='eulerian')
       f4v = f3v .* ss * 10;
       f5v = f4v .* ss * 13;
       f6v = f5v .* ss * 16;
-   elseif (strcmp(strain, 'quotient') | strcmp(strain, 'x1'))
+   elseif (strcmp(strain, 'quotient') || strcmp(strain, 'x1'))
       f = V./V0;
       f1v = ones(size(V)) * (1/V0);
       f2v = zeros(size(V));
@@ -134,20 +134,20 @@ function [s] = straineval (c, V0, V, strain='eulerian')
 
    # Evaluate E(f) and the derivatives of E versus f:
    s.E = polyval(c, f);
-   c1 = polyderiv(c);  E1f = polyval(c1, f);
-   c2 = polyderiv(c1); E2f = polyval(c2, f);
-   c3 = polyderiv(c2); E3f = polyval(c3, f);
-   c4 = polyderiv(c3); E4f = polyval(c4, f);
-   c5 = polyderiv(c4); E5f = polyval(c5, f);
+   c1 = polyder(c);  E1f = polyval(c1, f);
+   c2 = polyder(c1); E2f = polyval(c2, f);
+   c3 = polyder(c2); E3f = polyval(c3, f);
+   c4 = polyder(c3); E4f = polyval(c4, f);
+   c5 = polyder(c4); E5f = polyval(c5, f);
 
    # Get the derivatives of E versus V:
    s.E1v = E1f.*f1v;
    s.E2v = E2f.*f1v.^2 .+ E1f.*f2v;
    s.E3v = E3f.*f1v.^3 .+ E2f.*f1v.*f2v*3 .+ E1f.*f3v;
-   s.E4v = E4f.*f1v.^4 .+ E3f.*f1v.^2.*f2v*6 .+ \
+   s.E4v = E4f.*f1v.^4 .+ E3f.*f1v.^2.*f2v*6 .+...
            E2f.*(f1v.*f3v*4.+f2v.^2*3) .+ E1f.*f4v;
-   s.E5v = E5f.*f1v.^5 .+ E4f.*f1v.^3.*f2v*10 .+ \
-           E3f.*(f1v.^2.*f3v*10.+f1v.*f2v.^2*15) .+ \
+   s.E5v = E5f.*f1v.^5 .+ E4f.*f1v.^3.*f2v*10 .+...
+           E3f.*(f1v.^2.*f3v*10.+f1v.*f2v.^2*15) .+...
            E2f.*(f1v.*f4v*5.+f2v.*f3v*10) .+ E1f.*f5v;
 
    # Get the pressure, the bulk modulus, and its derivatives versus pressure:
@@ -155,7 +155,7 @@ function [s] = straineval (c, V0, V, strain='eulerian')
    s.B = V .* s.E2v;
    s.B1p = -(V .* s.E3v .+ s.E2v) ./ s.E2v;
    s.B2p = ((s.E4v.*s.E2v .- s.E3v.^2) .* V .+ s.E3v.*s.E2v) ./ s.E2v.^3;
-   s.B3p = -((s.E2v.^2.*s.E5v.-s.E2v.*s.E3v.*s.E4v*4.+s.E3v.^3*3).*V \
+   s.B3p = -((s.E2v.^2.*s.E5v.-s.E2v.*s.E3v.*s.E4v*4.+s.E3v.^3*3).*V...
          .+ s.E2v.^2.*s.E4v*2 .- s.E2v.*s.E3v.^2*3) ./ s.E2v.^5;
    
 endfunction

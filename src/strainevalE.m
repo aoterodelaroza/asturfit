@@ -37,7 +37,7 @@ function E = strainevalE (c, V0, V, strain='eulerian')
 % Created: September 2010.
 %
 
-   if (nargin < 3 | nargin > 4)
+   if (nargin < 3 || nargin > 4)
       print_usage ();
    endif
 
@@ -50,7 +50,7 @@ function E = strainevalE (c, V0, V, strain='eulerian')
       f = ((V./V0).^(2/3)-1)/2;
    elseif (strcmp(strain,'infinitesimal'))
       f = -(V./V0).^(-1/3)+1;
-   elseif (strcmp(strain, 'quotient') | strcmp(strain, 'x1'))
+   elseif (strcmp(strain, 'quotient') || strcmp(strain, 'x1'))
       f = V./V0;
    elseif (strcmp(strain, 'x3'))
       f = (V./V0).^(1/3);

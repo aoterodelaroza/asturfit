@@ -118,7 +118,7 @@ function [cb,sb] = strainbootstrap(V, E, V0, ndeg=12, nsample=100, strain='euler
    # If the average of polynomials has a minimum, analize the equilibrium
    # geometry.
    # Otherwise analyze the reference volume.
-   if (LOG | nargout > 1)
+   if (LOG || nargout > 1)
       [avgmin] = strainmin(cb, V0, Vrange, strain);
       if (avgmin.err == 0)
          if (LOG>0)
@@ -136,7 +136,7 @@ function [cb,sb] = strainbootstrap(V, E, V0, ndeg=12, nsample=100, strain='euler
             smin = pol{k1}.smin;
             Vmin = smin.Vmin;
             [prop] = straineval(pol{k1}.c, V0, Vmin, strain);
-            if (LOG>0 & k <= 25)
+            if (LOG>0 && k <= 25)
                # In the conversion of the bulk modulus and derivatives we
                # assume the units: volume (bohr^3), energy (Hy).
                hybohr3togpa = 2*14710.50498740275538944426;
@@ -192,7 +192,7 @@ function [cb,sb] = strainbootstrap(V, E, V0, ndeg=12, nsample=100, strain='euler
          for k = 1 : npol
             k1 = isrt(k);
             [prop] = straineval(pol{k1}.c, V0, V0, strain);
-            if (LOG>0 & k <= 25)
+            if (LOG>0 && k <= 25)
                # In the conversion of the bulk modulus and derivatives we
                # assume the units: volume (bohr^3), energy (Hy).
                hybohr3togpa = 2*14710.50498740275538944426;
@@ -263,7 +263,7 @@ function [cb,sb] = strainbootstrap(V, E, V0, ndeg=12, nsample=100, strain='euler
       # by the average polynomial. A robust measurement of what is normal
       # for a residual is provided by the median (but not the mean, which
       # too sensitive to outliear with large residuals):
-      if (nargout > 1 | LOG > 0)
+      if (nargout > 1 || LOG > 0)
          lambda = 10.0;
          Edif = abs(Efit - E);
          Ecentral = median(Edif);

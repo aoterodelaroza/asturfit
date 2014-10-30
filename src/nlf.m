@@ -49,7 +49,7 @@ function res = nlf(V, E, mode="none", pin=[], fit=1, LOG=1)
    global nelectrons
 
    mode = tolower(mode);
-   if (nargin < 2 | strcmp(mode,"none"))
+   if (nargin < 2 || strcmp(mode,"none"))
       print_usage();
    elseif (length(V) != length(E))
       error('nlf: V and E must be vectors of the same length!')
@@ -100,7 +100,7 @@ function res = nlf(V, E, mode="none", pin=[], fit=1, LOG=1)
          endif
       endif
       name = "BM5: 5th order Birch-Murnaghan EOS";
-      par_name = {'E0 (Hy)', 'V0 (bohr^3)', 'B0 (GPa)', 'B1p'\
+      par_name = {'E0 (Hy)', 'V0 (bohr^3)', 'B0 (GPa)', 'B1p'...
                , 'B2p (1/GPa)', 'B3p (1/GPa^2)'};
       par_fact = [1, 1, hybohr3togpa, 1, 1/hybohr3togpa, 1/hybohr3togpa^2];
       fun = @bm5_e;
@@ -140,7 +140,7 @@ function res = nlf(V, E, mode="none", pin=[], fit=1, LOG=1)
          endif
       endif
       name = "PT5: 5th order Poirier-Tarantola EOS";
-      par_name = {'E0 (Hy)', 'V0 (bohr^3)', 'B0 (GPa)', 'B1p'\
+      par_name = {'E0 (Hy)', 'V0 (bohr^3)', 'B0 (GPa)', 'B1p'...
                , 'B2p (1/GPa)', 'B3p (1/GPa^2)'};
       par_fact = [1, 1, hybohr3togpa, 1, 1/hybohr3togpa, 1/hybohr3togpa^2];
       fun = @pt5_e;
@@ -224,12 +224,12 @@ function res = nlf(V, E, mode="none", pin=[], fit=1, LOG=1)
          SStot = sum((E-mean(E)).^2);
          res.R2 = 1 - SSerr / SStot;
          if (LOG>0)
-            printf('SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'\
+            printf('SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'...
                   , SSerr, SStot, res.R2, 1-res.R2);
          endif
       endif
    else
-      [f1, p1, kvg1, iter1, corp1, covp1, covr1, stdresid1, Z1, r21] \
+      [f1, p1, kvg1, iter1, corp1, covp1, covr1, stdresid1, Z1, r21] ...
       = leasqr(V, E, pin, fun);
       SSerr = sum((E-f1).^2);
       SStot = sum((E-mean(E)).^2);
@@ -249,7 +249,7 @@ function res = nlf(V, E, mode="none", pin=[], fit=1, LOG=1)
          endfor
          printf('Convergence (1=yes)? %d\n', kvg1);
          printf('Iterations: %d\n', iter1);
-         printf('SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'\
+         printf('SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'...
                , SSerr, SStot, R2, 1-R2);
          printf('Correlation matrix of the parameters:\n');
          for i = 1 : rows(corp1)
@@ -314,7 +314,7 @@ function y0 = bm5_e(x,p)
    Bp0 = p(4); c3 = c2*(Bp0-4);
    Bpp0 = p(5); c4 = (3/8)*B0*V0*(9*(Bpp0*B0+Bp0*Bp0)-63*Bp0+143);
    Bppp0 = p(6);
-   c5 = (432*c2*c3*c4+576*c2^2*c4-243*c3^3-648*c2*c3^2-1350*c2^2*c3\
+   c5 = (432*c2*c3*c4+576*c2^2*c4-243*c3^3-648*c2*c3^2-1350*c2^2*c3...
       -2520*c2^3)/(180*c2*c2) + Bppp0*c2^3/(45*V0^2);
    y0 = f.*f.*(f.*(f.*(f.*c5+c4)+c3)+c2)+E0;
 endfunction
@@ -384,7 +384,7 @@ endfunction
 # p(4) B_0'
 function y = murn_e(x,p)
    xred = p(2) ./ x;
-   y = p(1) + p(3)*x/p(4) .* (xred.^p(4) / (p(4)-1) + 1) \
+   y = p(1) + p(3)*x/p(4) .* (xred.^p(4) / (p(4)-1) + 1) ...
      - p(3)*p(2)/(p(4)-1);
 endfunction
 

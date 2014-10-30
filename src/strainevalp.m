@@ -74,7 +74,7 @@ function p = strainevalp (c, V0, V, strain='eulerian')
    endif
 
    # Evaluate E(f):
-   c1 = polyderiv(c);
+   c1 = polyder(c);
    p = - polyval(c1, f) .* f1v * hybohr3togpa;
 
 endfunction

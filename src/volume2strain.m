@@ -29,7 +29,7 @@ function f = volume2strain(V, V0, strain='eulerian')
 %          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
 % Created: October 2010
 
-   if (nargin < 2 | nargin > 3)
+   if (nargin < 2 || nargin > 3)
       print_usage ();
    endif
 
@@ -42,7 +42,7 @@ function f = volume2strain(V, V0, strain='eulerian')
       f = ((V./V0).^(2/3)-1)/2;
    elseif (strcmp(strain,'infinitesimal'))
       f = -(V./V0).^(-1/3)+1;
-   elseif (strcmp(strain, 'quotient') | strcmp(strain, 'x1'))
+   elseif (strcmp(strain, 'quotient') || strcmp(strain, 'x1'))
       f = V./V0;
    elseif (strcmp(strain, 'x3'))
       f = (V./V0).^(1/3);

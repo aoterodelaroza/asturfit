@@ -39,7 +39,7 @@ function [s] = strainmin(c, V0, Vrange, strain='eulerian')
 %          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
 % Created: October 2010
 
-   if (nargin < 3 | nargin > 4)
+   if (nargin < 3 || nargin > 4)
       print_usage ();
    endif
 
@@ -53,7 +53,7 @@ function [s] = strainmin(c, V0, Vrange, strain='eulerian')
    c1 = polyder(c);
    c2 = polyder(c1);
    rr = roots(c1);
-   ipos = find(abs(imag(rr)) <= 1e-15 & polyval(c2,rr) > 0);
+   ipos = find(abs(imag(rr)) <= 1e-15 && polyval(c2,rr) > 0);
    if (length(ipos) < 1)
       %
       % There are no left roots. An error in the roots() routine?
@@ -63,7 +63,7 @@ function [s] = strainmin(c, V0, Vrange, strain='eulerian')
          printf('coefs. of polynomial and derivative:\n');
          printf('-i----real(c)---imag(c)---real(c1)---imag(c1)---\n');
          for i = 1:length(c)-1
-            printf('%3d %12.5e %12.5e %12.5e %12.5e\n', \
+            printf('%3d %12.5e %12.5e %12.5e %12.5e\n',...
                    i, real(c(i)), imag(c(i)), real(c1(i)), imag(c1(i)));
          endfor
          printf('%3d %12.5e %12.5e\n', length(c), real(c(end)), imag(c(end)));
@@ -80,7 +80,7 @@ function [s] = strainmin(c, V0, Vrange, strain='eulerian')
       % There is a single root. Check if it is inside range.
       %
       s.fmin = rr(ipos);
-      s.err = s.fmin < min(frange)*0.98 | s.fmin > max(frange)*1.02;
+      s.err = s.fmin < min(frange)*0.98 || s.fmin > max(frange)*1.02;
    else
       %
       % There are several candidates. Evaluate the polynomial in a grid
@@ -96,7 +96,7 @@ function [s] = strainmin(c, V0, Vrange, strain='eulerian')
       rx = abs(rr .- ffmin).^2;
       [rxmin,irxmin] = min(rx);
       s.fmin = rr(irxmin);
-      s.err = s.fmin < min(frange)*0.98 | s.fmin > max(frange)*1.02;
+      s.err = s.fmin < min(frange)*0.98 || s.fmin > max(frange)*1.02;
    endif
 
    if (s.err != 0)
@@ -116,9 +116,9 @@ function [s] = strainmin(c, V0, Vrange, strain='eulerian')
          fold = fnew; dold = delta; it++;
          fnew = fold - polyval(c1,fold) / polyval(c2,fold);
          delta = abs(fnew-fold);
-      until (delta < CONV | it > MAXIT)
+      until (delta < CONV || it > MAXIT)
       s.fmin = fnew;
-      s.err = delta<CONV | s.fmin<min(frange)*0.98 | s.fmin>max(frange)*1.02;
+      s.err = delta<CONV || s.fmin<min(frange)*0.98 || s.fmin>max(frange)*1.02;
    endif
 
    s.Vmin = strain2volume(s.fmin, V0, strain);

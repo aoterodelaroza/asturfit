@@ -39,7 +39,7 @@ set(gcf(),"visible","off");
 
 # plot the E(V) curves:
 fileplot = 'test07-ev.eps';
-plot(vb1,eb1,'or;;',vb1,sb1.Efit,'-r;B1 phase;'\
+plot(vb1,eb1,'or;;',vb1,sb1.Efit,'-r;B1 phase;'...
     ,vb2,eb2,'og;;',vb2,sb2.Efit,'-g;B2 phase;')
 xlabel('V (bohr^3)'); ylabel('E (hartree)'); grid('on');
 print(fileplot, '-FHelvetica:24', '-depsc');

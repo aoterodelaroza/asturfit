@@ -125,11 +125,11 @@ function [s] = pvstraineval (c, Vref, V, strain='eulerian')
 
    # Evaluate E(f) and the derivatives of E versus f:
    s.p = polyval(c, f);
-   c1 = polyderiv(c);  p1f = polyval(c1, f);
-   c2 = polyderiv(c1); p2f = polyval(c2, f);
-   c3 = polyderiv(c2); p3f = polyval(c3, f);
-   c4 = polyderiv(c3); p4f = polyval(c4, f);
-   c5 = polyderiv(c4); p5f = polyval(c5, f);
+   c1 = polyder(c);  p1f = polyval(c1, f);
+   c2 = polyder(c1); p2f = polyval(c2, f);
+   c3 = polyder(c2); p3f = polyval(c3, f);
+   c4 = polyder(c3); p4f = polyval(c4, f);
+   c5 = polyder(c4); p5f = polyval(c5, f);
 
    # Get the derivatives of E versus V:
    s.E1v = -s.p;

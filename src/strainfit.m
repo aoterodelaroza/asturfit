@@ -55,55 +55,55 @@ function [c,s] = strainfit (V,E,V0, ndeg=4, strain='eulerian', LOG=0)
    if (strcmp(strain,'eulerian'))
       f = ((V./V0).^(-2/3)-1)/2;
       f0 = 0;
-      if (LOG > 0 | nargout > 1)
+      if (LOG > 0 || nargout > 1)
          fpv = -(f + f + 1).^(5/2) / (3*V0);
          fppv = (f + f + 1).^4 * (5/(3*V0)^2);
       endif
    elseif (strcmp(strain, 'natural'))
       f = log(V./V0)/3;
       f0 = 0;
-      if (LOG > 0 | nargout > 1)
+      if (LOG > 0 || nargout > 1)
          fpv = 1./(V.*3);
          fppv = -1./(V.**2 .*3);
       endif
    elseif (strcmp(strain,'lagrangian'))
       f = ((V./V0).^(2/3)-1)/2;
       f0 = 0;
-      if (LOG > 0 | nargout > 1)
+      if (LOG > 0 || nargout > 1)
          fpv = (f + f + 1).^(-1/2) / (3*V0);
          fppv = -(f + f + 1).^(-2) / (3*V0)^2;
       endif
    elseif (strcmp(strain,'infinitesimal'))
       f = -(V./V0).^(-1/3)+1;
       f0 = 0;
-      if (LOG > 0 | nargout > 1)
+      if (LOG > 0 || nargout > 1)
          fpv = (-f + 1).^4 / (3*V0);
          fppv = -(-f + 1).^7 * (4/(3*V0)^2);
       endif
-   elseif (strcmp(strain, 'quotient') | strcmp(strain, 'x1'))
+   elseif (strcmp(strain, 'quotient') || strcmp(strain, 'x1'))
       f = V./V0;
       f0 = 1;
-      if (LOG > 0 | nargout > 1)
+      if (LOG > 0 || nargout > 1)
          fpv = ones(size(V)) * (1/V0);
          fppv = zeros(size(V));
       endif
    elseif (strcmp(strain, 'x3'))
       f = (V./V0).^(1/3);
       f0 = 1;
-      if (LOG > 0 | nargout > 1)
+      if (LOG > 0 || nargout > 1)
          fpv = 1./(f.^2*(3*V0));
          fppv = -f.^(-5) * (2/(3*V0)^2);
       endif
    elseif (strcmp(strain, 'xinv3'))
       f = (V./V0).^(-1/3);
       f0 = 1;
-      if (LOG > 0 | nargout > 1)
+      if (LOG > 0 || nargout > 1)
          fpv = -f.^4 * (1/(3*V0));
          fppv = f.^7 * (4/(3*V0)^2);
       endif
    elseif (strcmp(strain, 'V'))
       f = V;
-      if (LOG > 0 | nargout > 1)
+      if (LOG > 0 || nargout > 1)
          fpv = ones(size(V));
          fppv = zeros(size(V));
       endif
@@ -113,7 +113,7 @@ function [c,s] = strainfit (V,E,V0, ndeg=4, strain='eulerian', LOG=0)
 
    c = polyfit(f, E, ndeg);
 
-   if (LOG > 0 | nargout > 1)
+   if (LOG > 0 || nargout > 1)
       # Evaluate the fitting polynomial and get the determination coefficient:
       Efit = polyval(c, f);
       SSerr = sum((E-Efit).^2);
@@ -131,7 +131,7 @@ function [c,s] = strainfit (V,E,V0, ndeg=4, strain='eulerian', LOG=0)
       c1 = polyder(c);
       c2 = polyder(c1);
       rr = roots(c1);
-      ipos = find(abs(imag(rr)) <= 1e-15 & polyval(c2,rr) > 0);
+      ipos = find(abs(imag(rr)) <= 1e-15 && polyval(c2,rr) > 0);
       if (length(ipos) < 1)
          printf('strainfit algorithmic error (1):\n');
          printf('strain & ndeg: %s %d\n', strain, ndeg);
@@ -180,7 +180,7 @@ function [c,s] = strainfit (V,E,V0, ndeg=4, strain='eulerian', LOG=0)
          fpvmin = (1-fmin)^4/(3*V0);
          fppvmin = -(1-fmin)^7 * (4/(3*V0)**2);
          fpppvmin = (1-fmin)^10 * (28/(3*V0)**3);
-      elseif (strcmp(strain, 'quotient') | strcmp(strain, 'x1'))
+      elseif (strcmp(strain, 'quotient') || strcmp(strain, 'x1'))
          Vmin = V0 * fmin;
          fpvmin = 1/V0;
          fppvmin = 0;
