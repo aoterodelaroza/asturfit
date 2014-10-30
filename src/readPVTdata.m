@@ -106,8 +106,8 @@ function [p, V, T] = readPVTdata (filename, LOG=1)
 	[first,sec] = sscanf(line,"%s %s","C");
 	if (isa(first,"char") && isa(sec,"char"))
 	  first = tolower(first); sec = tolower(sec);
-	  [idx, err] = cellidx(Keyw,first);
-	  if (idx != 0)
+          idx = ismember(Keyw,first);
+	  if (any(idx) != 0)
 	    eval(strcat(first,"='",sec,"' ;"));
 	  endif
 	endif
