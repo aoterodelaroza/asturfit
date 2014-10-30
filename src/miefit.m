@@ -237,19 +237,19 @@ function res = miefit(p, V, T, Vref, Tref, mode1="none", mode2="none", pin1=[], 
          SStot = sum((yvar-mean(yvar)).^2);
          res.R2 = 1 - SSerr / SStot;
          if (LOG>0)
-            printf('(Thermal) SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'\
+            printf('(Thermal) SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'...
                   , SSerr, SStot, res.R2, 1-res.R2);
          endif
          SSerr = sum((p-res.pfit).^2);
          SStot = sum((p-mean(p)).^2);
          res.R2 = 1 - SSerr / SStot;
          if (LOG>0)
-            printf('(.Total.) SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'\
+            printf('(.Total.) SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'...
                   , SSerr, SStot, res.R2, 1-res.R2);
          endif
       endif
    else
-      [f1, p1, kvg1, iter1, corp1, covp1, covr1, stdresid1, Z1, r21] \
+      [f1, p1, kvg1, iter1, corp1, covp1, covr1, stdresid1, Z1, r21]...
       = leasqr(xvar, yvar, pin2, fun2, 1e-9, 30);
       SSerr2 = sum((yvar-f1).^2);
       SStot2 = sum((yvar-mean(yvar)).^2);
@@ -272,9 +272,9 @@ function res = miefit(p, V, T, Vref, Tref, mode1="none", mode2="none", pin1=[], 
          endfor
          printf('Convergence (1=yes)? %d\n', kvg1);
          printf('Iterations: %d\n', iter1);
-         printf('(Thermal) SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'\
+         printf('(Thermal) SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'...
                , SSerr2, SStot2, R22, 1-R22);
-         printf('(.Total.) SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'\
+         printf('(.Total.) SSerr, SStot, R2, 1-R2: %.6e %.6e %.12f %.2e\n'...
                , SSerr, SStot, R2, 1-R2);
          printf('Correlation matrix of the parameters:\n');
          for i = 1 : rows(corp1)

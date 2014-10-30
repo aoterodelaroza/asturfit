@@ -156,11 +156,11 @@ function [cavg,savg] = pvavgstrainfit (p, V, Vref, nmax=16, MODE=1, strain='eule
          if (LOG > 0)
             printf('\nAverage properties (weighted polynomials):\n');
             printf('------ ---volume-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)\n');
-            printf('-mean- %11.6f %11.6f %11.6f %11.6f %14.9f\n', pmean(1) \
-                  , pmean(2)*hybohr3togpa, pmean(3), pmean(4)/hybohr3togpa \
+            printf('-mean- %11.6f %11.6f %11.6f %11.6f %14.9f\n', pmean(1)...
+                  , pmean(2)*hybohr3togpa, pmean(3), pmean(4)/hybohr3togpa...
                   , pmean(5)/hybohr3togpa^2);
-            printf('stdvev %11.6f %11.6f %11.6f %11.6f %14.9f\n', pstd(1) \
-                  , pstd(2)*hybohr3togpa, pstd(3) \
+            printf('stdvev %11.6f %11.6f %11.6f %11.6f %14.9f\n', pstd(1)...
+                  , pstd(2)*hybohr3togpa, pstd(3)...
                   , pstd(4)/hybohr3togpa, pstd(5)/hybohr3togpa^2);
          endif
       else
@@ -200,11 +200,11 @@ function [cavg,savg] = pvavgstrainfit (p, V, Vref, nmax=16, MODE=1, strain='eule
          if (LOG > 0)
             printf('\nAverage properties at the ref. volume: %.9f\n', Vref);
             printf('------ --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)\n');
-            printf('-mean- %11.6f %11.6f %11.6f %14.9f\n' \
-                  , pmean(2)*hybohr3togpa, pmean(3), pmean(4)/hybohr3togpa \
+            printf('-mean- %11.6f %11.6f %11.6f %14.9f\n'...
+                  , pmean(2)*hybohr3togpa, pmean(3), pmean(4)/hybohr3togpa...
                   , pmean(5)/hybohr3togpa^2);
-            printf('stdvev %11.6f %11.6f %11.6f %14.9f\n' \
-                  , pstd(2)*hybohr3togpa, pstd(3) \
+            printf('stdvev %11.6f %11.6f %11.6f %14.9f\n'...
+                  , pstd(2)*hybohr3togpa, pstd(3)...
                   , pstd(4)/hybohr3togpa, pstd(5)/hybohr3togpa^2);
          endif
       endif

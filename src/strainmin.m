@@ -69,7 +69,7 @@ function [s] = strainmin(c, V0, Vrange, strain='eulerian')
          printf('%3d %12.5e %12.5e\n', length(c), real(c(end)), imag(c(end)));
          printf('-iroot---real---imag---deriv2---\n');
          for i = 1:length(rr)
-            printf('%6d %13.6e %13.6e %13.6e\n', \
+            printf('%6d %13.6e %13.6e %13.6e\n',...
                    i, real(rr(i)), imag(rr(i)), polyval(c2,rr(i)));
          endfor
       endif

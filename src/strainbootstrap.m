@@ -161,19 +161,19 @@ function [cb,sb] = strainbootstrap(V, E, V0, ndeg=12, nsample=100, strain='euler
          if (LOG>0)
             printf('\nAverage properties (weighted polynomials):\n');
             printf('------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)\n');
-            printf('-mean- %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n' \
-                  , pmean(1), pmean(2), pmean(3)*hybohr3togpa, pmean(4)\
+            printf('-mean- %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n'...
+                  , pmean(1), pmean(2), pmean(3)*hybohr3togpa, pmean(4)...
                   , pmean(5)/hybohr3togpa, pmean(6)/hybohr3togpa^2);
-            printf('stdvev %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n' \
-                  , pstd(1), pstd(2), pstd(3)*hybohr3togpa, pstd(4)\
+            printf('stdvev %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n'...
+                  , pstd(1), pstd(2), pstd(3)*hybohr3togpa, pstd(4)...
                   , pstd(5)/hybohr3togpa, pstd(6)/hybohr3togpa^2);
             printf('\nAverage properties (equally weighted polynomials):\n');
             printf('------ ---volume-- ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)\n');
-            printf('-mean- %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n' \
-                  , pmean2(1), pmean2(2), pmean2(3)*hybohr3togpa, pmean2(4)\
+            printf('-mean- %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n'...
+                  , pmean2(1), pmean2(2), pmean2(3)*hybohr3togpa, pmean2(4)...
                   , pmean2(5)/hybohr3togpa, pmean2(6)/hybohr3togpa^2);
-            printf('stdvev %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n' \
-                  , pstd2(1), pstd2(2), pstd2(3)*hybohr3togpa, pstd2(4)\
+            printf('stdvev %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n'...
+                  , pstd2(1), pstd2(2), pstd2(3)*hybohr3togpa, pstd2(4)...
                   , pstd2(5)/hybohr3togpa, pstd2(6)/hybohr3togpa^2);
          endif
       else
@@ -217,19 +217,19 @@ function [cb,sb] = strainbootstrap(V, E, V0, ndeg=12, nsample=100, strain='euler
             printf('\nAverage properties (weighted polynomials):\n');
             printf('\nAverage properties at the ref. volume: %.9f\n', V0);
             printf('------ ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)\n');
-            printf('-mean- %11.6f %11.6f %11.6f %11.6f %14.9f\n' \
-                  , pmean(2), pmean(3)*hybohr3togpa, pmean(4)\
+            printf('-mean- %11.6f %11.6f %11.6f %11.6f %14.9f\n'...
+                  , pmean(2), pmean(3)*hybohr3togpa, pmean(4)...
                   , pmean(5)/hybohr3togpa, pmean(6)/hybohr3togpa^2);
-            printf('stdvev %11.6f %11.6f %11.6f %11.6f %14.9f\n' \
-                  , pstd(2), pstd(3)*hybohr3togpa, pstd(4)\
+            printf('stdvev %11.6f %11.6f %11.6f %11.6f %14.9f\n'...
+                  , pstd(2), pstd(3)*hybohr3togpa, pstd(4)...
                   , pstd(5)/hybohr3togpa, pstd(6)/hybohr3togpa^2);
             printf('\nAverage properties (equally weighted polynomials):\n');
             printf('------ ---energy-- --B-(GPa)-- ----B1p---- B2p-(1/GPa) B3p--(1/GPa^2)\n');
-            printf('-mean- %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n' \
-                  , pmean2(1), pmean2(2), pmean2(3)*hybohr3togpa, pmean2(4)\
+            printf('-mean- %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n'...
+                  , pmean2(1), pmean2(2), pmean2(3)*hybohr3togpa, pmean2(4)...
                   , pmean2(5)/hybohr3togpa, pmean2(6)/hybohr3togpa^2);
-            printf('stdvev %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n' \
-                  , pstd2(1), pstd2(2), pstd2(3)*hybohr3togpa, pstd2(4)\
+            printf('stdvev %11.6f %11.6f %11.6f %11.6f %11.6f %14.9f\n'...
+                  , pstd2(1), pstd2(2), pstd2(3)*hybohr3togpa, pstd2(4)...
                   , pstd2(5)/hybohr3togpa, pstd2(6)/hybohr3togpa^2);
          endif
       endif
@@ -248,13 +248,13 @@ function [cb,sb] = strainbootstrap(V, E, V0, ndeg=12, nsample=100, strain='euler
       if (LOG>0)
          printf('\n\nProperties of the average polynomial:\n');
          printf('Vmin, Emin: %.6f %.6f\n', Vmin, prop.E);
-         printf('SSerr, SStot, R2, 1-R2: %.9e %.9e %.12f %.2e\n' \
+         printf('SSerr, SStot, R2, 1-R2: %.9e %.9e %.12f %.2e\n'...
                , SSerr, SStot, R2, 1-R2);
          nd = zeros(npol,1);
          for i = 1:npol
              nd(i) = pol{i}.data;
          endfor
-         printf('Data (min/max/mode/mean/std): %d %d %d %.4f %.4f\n' \
+         printf('Data (min/max/mode/mean/std): %d %d %d %.4f %.4f\n'...
                , min(nd), max(nd), mode(nd), mean(nd), std(nd));
       endif
 

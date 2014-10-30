@@ -127,7 +127,7 @@ function [V,E] = readEVdata (filename, LOG=1)
       eps = eps.^3;
     elseif (strcmp(x,"ang") || strcmp(x,"angstrom") || strcmp(x,"a"))
       eps = (eps * angtobohr).^3;
-    elseif (strcmp(x,"ang3") || strcmp(x,"angstrom3") || strcmp(x,"a3") ||\
+    elseif (strcmp(x,"ang3") || strcmp(x,"angstrom3") || strcmp(x,"a3") ||...
 	    strcmp(x,"ang^3") || strcmp(x,"angstrom^3") || strcmp(x,"a^3"))
       eps = eps * angtobohr^3;
     else
@@ -138,7 +138,7 @@ function [V,E] = readEVdata (filename, LOG=1)
     if (LOG>0)
        printf("Input volume unit: %s\n", volume)
     endif
-    if (strcmp(volume,"ang3") || strcmp(volume,"angstrom3") || strcmp(volume,"a3") ||\
+    if (strcmp(volume,"ang3") || strcmp(volume,"angstrom3") || strcmp(volume,"a3") ||...
         strcmp(volume,"ang^3") || strcmp(volume,"angstrom^3") || strcmp(volume,"a^3"))
       eps = eps * angtobohr^3;
     elseif (strcmp(volume,"bohr3") || strcmp(volume,"bohr^3"))

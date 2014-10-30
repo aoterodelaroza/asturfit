@@ -111,7 +111,7 @@ printf("Bootstrap sample size: %d\n", sample);
 bad = sb.outliers;
 good = 1:length(v); good(bad) = [];
 fileplot = sprintf("%s-evn.eps", rootname);
-plot(v,sb.Efit,'-r;BS fit;', v(good),e(good),'ob;good data;' \
+plot(v,sb.Efit,'-r;BS fit;', v(good),e(good),'ob;good data;'...
     , v(bad),e(bad),'om;bad data;', 'markersize', 12);
 xlabel('V (bohr^3)'); ylabel('E (hartree)'); grid('on');
 print(fileplot, '-FHelvetica:24', '-depsc');

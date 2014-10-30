@@ -204,7 +204,7 @@ function [c,s] = strainfit (V,E,V0, ndeg=4, strain='eulerian', LOG=0)
          fpppvmin = 0;
       endif
       Bmin = Vmin * (E2min * fpvmin^2 + E1min * fppvmin);
-      Bfmin = E3min*Vmin*fpvmin^2 + E2min*(fpvmin+3*fppvmin*Vmin) \
+      Bfmin = E3min*Vmin*fpvmin^2 + E2min*(fpvmin+3*fppvmin*Vmin)...
             + E1min*(fppvmin+Vmin*fpppvmin)/fpvmin;
       pfmin = -(E2min*fpvmin-E1min*fppvmin/fpvmin);
       Bpmin = Bfmin/pfmin;
