@@ -1,0 +1,12 @@
+AsturFit is an octave package for fitting equation of state functions
+to energy-volume and pressure-volume data in solids.
+
+The ~/doc directory contains the documentation: asturfit.pdf and
+asturfit.txt (plain ascii text written in reStructuredText
+format). This includes instructions for installing the package,
+examples of use, and a description of all routines.
+
+The sources reside in the ~/src directory. A number of data sets,
+example test scripts, and the output of the tests, can be found in the
+~/test directory.
+
