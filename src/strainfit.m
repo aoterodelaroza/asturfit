@@ -131,7 +131,7 @@ function [c,s] = strainfit (V,E,V0, ndeg=4, strain='eulerian', LOG=0)
       c1 = polyder(c);
       c2 = polyder(c1);
       rr = roots(c1);
-      ipos = find(abs(imag(rr)) <= 1e-15 && polyval(c2,rr) > 0);
+      ipos = find(abs(imag(rr)) <= 1e-15 & polyval(c2,rr) > 0);
       if (length(ipos) < 1)
          printf('strainfit algorithmic error (1):\n');
          printf('strain & ndeg: %s %d\n', strain, ndeg);
