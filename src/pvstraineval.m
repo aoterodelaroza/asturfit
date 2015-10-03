@@ -43,7 +43,7 @@ function [s] = pvstraineval (c, Vref, V, strain='eulerian')
 % Created: January 2011.
 %
 
-   if (nargin < 3 | nargin > 4)
+   if (nargin < 3 || nargin > 4)
       print_usage ();
    endif
 
@@ -85,7 +85,7 @@ function [s] = pvstraineval (c, Vref, V, strain='eulerian')
       f4v = f3v .* ss * 10;
       f5v = f4v .* ss * 13;
       f6v = f5v .* ss * 16;
-   elseif (strcmp(strain, 'quotient') | strcmp(strain, 'x1'))
+   elseif (strcmp(strain, 'quotient') || strcmp(strain, 'x1'))
       f = V./Vref;
       f1v = ones(size(V)) * (1/Vref);
       f2v = zeros(size(V));

@@ -65,7 +65,7 @@ function [xn,yn] = noisify (x, y, points=-0.1, xfac=0.1, yfac=0.1, LOG=0)
    endfor
 
    if (LOG > 0)
-      nd = find(xn!=x || yn!=y);
+      nd = find(xn!=x | yn!=y);
       nnd = length(nd);
       printf('\nnoisify: Added noise to %d points of %d\n', nnd, ndata);
       printf('--point-- ------xold----- ------xnew----- ------yold----- ------ynew-----\n');

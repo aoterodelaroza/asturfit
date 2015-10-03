@@ -56,7 +56,7 @@ function [c,s] = pvstrainfit (p,V,Vref, ndeg=4, strain='eulerian', LOG=1)
    # Polynomial fitting:
    c = polyfit(f, p, ndeg-1);
 
-   if (LOG > 0 | nargout > 1)
+   if (LOG > 0 || nargout > 1)
       # Evaluate the fitting polynomial and get the determination coefficient:
       pfit = polyval(c, f);
       SSerr = sum((p-pfit).^2);

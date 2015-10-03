@@ -73,7 +73,7 @@ function [c, stepout, Ecorr] = strainjumpfit (V, E, V0, stepin, ndeg=14 \
       endfor
    endif
    A = zeros(m,m); b = zeros(m,1); maxdif = 10*conv; nstp = 0;
-   while (++nstp <= MAXSTEP & maxdif > conv)
+   while (++nstp <= MAXSTEP && maxdif > conv)
       #
       # Remove the known steps:
       Erest1 = E;

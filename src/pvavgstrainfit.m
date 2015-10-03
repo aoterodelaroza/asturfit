@@ -56,7 +56,7 @@ function [cavg,savg] = pvavgstrainfit (p, V, Vref, nmax=16, MODE=1, strain='eule
       error('pvavgstrainfit: p and V must be vectors of the same length!')
    elseif (length(V) < 7)
       error('pvavgstrainfit: dataset must have at least 7 points!')
-   elseif (MODE != 1 & MODE != 2)
+   elseif (MODE != 1 && MODE != 2)
       error('pvavgstrainfit: weighting mode must be 1 or 2!')
    endif
 
@@ -116,7 +116,7 @@ function [cavg,savg] = pvavgstrainfit (p, V, Vref, nmax=16, MODE=1, strain='eule
    # If the average of polynomials has a minimum, analize the equilibrium
    # geometry.
    # Otherwise analyze the reference volume.
-   if (LOG > 0 | nargout > 1)
+   if (LOG > 0 || nargout > 1)
       [avgmin] = pvstrainmin(cavg, Vref, Vrange, strain);
       if (avgmin.err == 0)
          # Analyze and report the equilibrium geometry:
@@ -134,7 +134,7 @@ function [cavg,savg] = pvavgstrainfit (p, V, Vref, nmax=16, MODE=1, strain='eule
             k1 = isrt(k);
             smin = pol{k1}.smin;
             [prop] = pvstraineval(pol{k1}.c, Vref, smin.Vmin, strain);
-            if (LOG > 0 & k <= 25)
+            if (LOG > 0 && k <= 25)
                # In the conversion of the bulk modulus and derivatives we
                # assume the units: volume (bohr^3), pressure (GPa).
                # hybohr3togpa = 2*14710.50498740275538944426;
@@ -179,7 +179,7 @@ function [cavg,savg] = pvavgstrainfit (p, V, Vref, nmax=16, MODE=1, strain='eule
          for k = 1 : npol
             k1 = isrt(k);
             [prop] = pvstraineval(pol{k1}.c, Vref, Vref, strain);
-            if (LOG > 0 & k <= 25)
+            if (LOG > 0 && k <= 25)
                # In the conversion of the bulk modulus and derivatives we
                # assume the units: volume (bohr^3), energy (Hy).
                # hybohr3togpa = 2*14710.50498740275538944426;

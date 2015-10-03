@@ -39,7 +39,7 @@ function [s] = strainspinodal(c, V0, Vrange, strain='eulerian')
 %          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
 % Created: October 2010
 
-   if (nargin < 3 | nargin > 4)
+   if (nargin < 3 || nargin > 4)
       print_usage ();
    endif
 
@@ -51,7 +51,7 @@ function [s] = strainspinodal(c, V0, Vrange, strain='eulerian')
       rr = linspace(min(ra), max(ra), MPTS);
       prop = straineval(c, V0, rr, strain);
       [bmin,ibmin] = min(abs(prop.B));
-      s.err = s.err | (length(find(prop.B <= 0)) < 1);
+      s.err = s.err || (length(find(prop.B <= 0)) < 1);
       ra = [rr(max(1,ibmin-1)), rr(min(MPTS,ibmin+1))];
    endfor
    s.Vsp = rr(ibmin);

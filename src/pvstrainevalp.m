@@ -34,7 +34,7 @@ function p = pvstrainevalp (c, Vref, V, strain='eulerian')
 % Created: January 2011.
 %
 
-   if (nargin < 3 | nargin > 4)
+   if (nargin < 3 || nargin > 4)
       print_usage ();
    endif
 

@@ -39,7 +39,7 @@ function p = strainevalp (c, V0, V, strain='eulerian')
 
    hybohr3togpa = 2*14710.50498740275538944426;
 
-   if (nargin < 3 | nargin > 4)
+   if (nargin < 3 || nargin > 4)
       print_usage ();
    endif
 
@@ -57,7 +57,7 @@ function p = strainevalp (c, V0, V, strain='eulerian')
    elseif (strcmp(strain,'infinitesimal'))
       f = -(V./V0).^(-1/3)+1;
       f1v = (-f + 1).^4 / (3*V0);
-   elseif (strcmp(strain, 'quotient') | strcmp(strain, 'x1'))
+   elseif (strcmp(strain, 'quotient') || strcmp(strain, 'x1'))
       f = V./V0;
       f1v = ones(size(V)) * (1/V0);
    elseif (strcmp(strain, 'x3'))

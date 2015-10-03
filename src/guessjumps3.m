@@ -86,7 +86,7 @@ function [steps,Ecorr] = guessjumps3(V,E, deltaE=0, LOG=0)
       Vj = (V(i2)+V(i1))/2;
       left = find(V < Vj);
       right = find(V > Vj);
-      if (length(left)>1 & length(right)>1)
+      if (length(left)>1 && length(right)>1)
          Ej = interp1(V(right),E(right),Vj,'linear','extrap') \
             - interp1(V(left),E(left),Vj,'linear','extrap');
          if (abs(Ej) >= deltaE)

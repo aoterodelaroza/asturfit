@@ -53,7 +53,7 @@ function [s] = strainmin(c, V0, Vrange, strain='eulerian')
    c1 = polyder(c);
    c2 = polyder(c1);
    rr = roots(c1);
-   ipos = find(abs(imag(rr)) <= 1e-15 && polyval(c2,rr) > 0);
+   ipos = find(abs(imag(rr)) <= 1e-15 & polyval(c2,rr) > 0);
    if (length(ipos) < 1)
       %
       % There are no left roots. An error in the roots() routine?

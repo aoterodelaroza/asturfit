@@ -83,7 +83,7 @@ do
    printf("  %.3e", newerr);
    printf("\n");
    n++;
-until (sum(newerr > 1.5*olderr)>1 | n > 14)
+until (sum(newerr > 1.5*olderr)>1 || n > 14)
 [m,im] = min(degerrs);
 nbest = degree(max(im));
 printf("\nBest degree found for averaging: %d\n", nbest);

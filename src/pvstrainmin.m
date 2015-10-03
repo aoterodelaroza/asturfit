@@ -36,7 +36,7 @@ function [s] = pvstrainmin(c, Vref, Vrange, strain='eulerian')
 %          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
 % Created: January 2011
 
-   if (nargin < 3 | nargin > 4)
+   if (nargin < 3 || nargin > 4)
       print_usage ();
    endif
    frange = volume2strain(Vrange, Vref, strain);
@@ -46,7 +46,7 @@ function [s] = pvstrainmin(c, Vref, Vrange, strain='eulerian')
       fgrid = linspace(min(frange), max(frange), ngrid+1);
       pgrid = polyval(c,fgrid);
       [pmin,imin] = min(abs(pgrid));
-   until ((imin>1 & imin<length(pgrid)) | ngrid > 1000)
+   until ((imin>1 && imin<length(pgrid)) || ngrid > 1000)
    if (abs(pgrid(imin)) <= 1e-5)
       # We have located the p=0 point by chance.
       s.err = 0;
@@ -54,7 +54,7 @@ function [s] = pvstrainmin(c, Vref, Vrange, strain='eulerian')
       s.fmin = fgrid(imin);
       s.Vmin = strain2volume(s.fmin,Vref,strain);
       return
-   elseif (imin<=1 | imin>=length(pgrid))
+   elseif (imin<=1 || imin>=length(pgrid))
       # Problem 1: the equilibrium point, if any, is at the end of the range.
       s.err = 1;
       s.pmin = pmin;
@@ -73,7 +73,7 @@ function [s] = pvstrainmin(c, Vref, Vrange, strain='eulerian')
    finf = fgrid(imin-1); pinf = pgrid(imin-1);
    fsup = fgrid(imin+1); psup = pgrid(imin+1);
    fmid = finf + (fsup-finf)/2;
-   while (abs(fmid-finf)>eps & abs(fmid-fsup)>eps)
+   while (abs(fmid-finf)>eps && abs(fmid-fsup)>eps)
       pmid = polyval(c,fmid);
       if (pinf*pmid < 0)
          fsup = fmid;

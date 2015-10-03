@@ -85,7 +85,7 @@ for i = 1 : length(sttypes)
       printf("  %.3e", newerr);
       printf("\n");
       n++;
-   until (sum(newerr > 1.2*olderr)>1 | n > 18)
+   until (sum(newerr > 1.2*olderr)>1 || n > 18)
    [cf,sf] = avgstrainfit(v,e,vref,--n,:,strain,1);
 endfor
 

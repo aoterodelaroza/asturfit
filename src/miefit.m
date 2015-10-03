@@ -92,9 +92,9 @@ function res = miefit(p, V, T, Vref, Tref, mode1="none", mode2="none", pin1=[], 
    mode1 = tolower(mode1);
    mode2 = tolower(mode2);
    V0 = Vref; T0 = Tref;
-   if (nargin < 5 | strcmp(mode1,"none") | strcmp(mode2,"none"))
+   if (nargin < 5 || strcmp(mode1,"none") || strcmp(mode2,"none"))
       print_usage();
-   elseif (length(p) != length(V) | length(p) != length(T))
+   elseif (length(p) != length(V) || length(p) != length(T))
       error('miefit: p, V, and T must be vectors of the same length!');
    elseif (exist("leasqr") ~= 2)
       error('miefit: leasqr, from octaveforge/optim, MUST be in your path (pth fit)!');
@@ -109,9 +109,9 @@ function res = miefit(p, V, T, Vref, Tref, mode1="none", mode2="none", pin1=[], 
       if (length(pin1) < 1)
          error('miefit: In fit==0 mode you *must* give the pin parameters!')
       endif
-      if (strcmp(mode1,'eulerian') | regexp(mode1,'bm[0-9]*'))
+      if (strcmp(mode1,'eulerian') || regexp(mode1,'bm[0-9]*'))
          pfit1 = pvstrainevalp(pin1, Vref, V, 'eulerian');
-      elseif (strcmp(mode1,'natural') | regexp(mode1,'pt[0-9]*'))
+      elseif (strcmp(mode1,'natural') || regexp(mode1,'pt[0-9]*'))
          pfit1 = pvstrainevalp(pin1, Vref, V, 'natural');
       else
          error('miefit: cold EOS mode unknown!')
@@ -125,7 +125,7 @@ function res = miefit(p, V, T, Vref, Tref, mode1="none", mode2="none", pin1=[], 
       endif
       [pcold,icold] = sort(p(iref));
       vcold = V(iref)(icold);
-      if (strcmp(mode1,'bm') | strcmp(mode1,'eulerian'))
+      if (strcmp(mode1,'bm') || strcmp(mode1,'eulerian'))
          [cavg,savg] = pvavgstrainfit(pcold,vcold,Vref,10,:,'eulerian',LOG);
          res.pout1 = cavg;
          pfit1 = pvstrainevalp(cavg, Vref, V, 'eulerian');
@@ -139,7 +139,7 @@ function res = miefit(p, V, T, Vref, Tref, mode1="none", mode2="none", pin1=[], 
          res.pout1 = cf;
          pfit1 = pvstrainevalp(cf, Vref, V, 'eulerian');
          pth = p - pfit1;
-      elseif (strcmp(mode1,'pt') | strcmp(mode1,'natural'))
+      elseif (strcmp(mode1,'pt') || strcmp(mode1,'natural'))
          [cavg,savg] = pvavgstrainfit(pcold,vcold,Vref,10,:,'natural',LOG);
          res.pout1 = cavg;
          pfit1 = pvstrainevalp(cavg, Vref, V, 'natural');
