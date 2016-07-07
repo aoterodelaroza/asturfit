@@ -79,7 +79,7 @@ function res = miefit(p, V, T, Vref, Tref, mode1="none", mode2="none", pin1=[], 
 %   res.R2 ...... determination coefficient (1 for a exact fit).
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: January 2011
 
    %% Global variables

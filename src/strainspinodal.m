@@ -36,7 +36,7 @@ function [s] = strainspinodal(c, V0, Vrange, strain='eulerian')
 %    s.err: 0 if no error happened, !=0 otherwise.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: October 2010
 
    if (nargin < 3 || nargin > 4)

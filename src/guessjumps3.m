@@ -34,7 +34,7 @@ function [steps,Ecorr] = guessjumps3(V,E, deltaE=0, LOG=0)
 % Ecorr: vector containing the corrected values for E.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: October 2010
 
    n = length(E);

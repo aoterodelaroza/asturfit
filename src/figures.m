@@ -31,7 +31,7 @@ function ur = figures(x)
 %    figures(1.23e-7)       -> 1e-9
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: November 2010.
 %
    if (nargin != 1 )

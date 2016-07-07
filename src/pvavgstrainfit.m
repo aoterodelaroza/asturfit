@@ -46,7 +46,7 @@ function [cavg,savg] = pvavgstrainfit (p, V, Vref, nmax=16, MODE=1, strain='eule
 %       bulk modulus.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: January 2011
 %
 

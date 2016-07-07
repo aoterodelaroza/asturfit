@@ -52,7 +52,7 @@ function [cavg,savg] = avgstrainfit (V, E, V0, nmax=16, MODE=1, strain='eulerian
 %       bulk modulus.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: September 2010
 %
 

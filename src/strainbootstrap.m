@@ -46,7 +46,7 @@ function [cb,sb] = strainbootstrap(V, E, V0, ndeg=12, nsample=100, strain='euler
 %    sb.R2: determination coefficient (1 for a exact fitting).
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: October 2010
 
    if (nargin < 3)

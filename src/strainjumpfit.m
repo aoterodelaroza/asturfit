@@ -46,7 +46,7 @@ function [c, stepout, Ecorr] = strainjumpfit (V, E, V0, stepin, ndeg=14 \
 % Ecorr: energy values with the known jumps taken out.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: November 2010.
 %
 

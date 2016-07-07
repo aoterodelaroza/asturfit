@@ -39,7 +39,7 @@ function [s] = pvstraineval (c, Vref, V, strain='eulerian')
 %       s.B3p: third derivative of the bulk modulus versus p.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: January 2011.
 %
 

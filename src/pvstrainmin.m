@@ -33,7 +33,7 @@ function [s] = pvstrainmin(c, Vref, Vrange, strain='eulerian')
 %    s.err:  error code. 0 means no problem.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: January 2011
 
    if (nargin < 3 || nargin > 4)

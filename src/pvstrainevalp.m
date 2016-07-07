@@ -30,7 +30,7 @@ function p = pvstrainevalp (c, Vref, V, strain='eulerian')
 % p: pressures evaluated at the V points.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: January 2011.
 %
 

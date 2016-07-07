@@ -42,7 +42,7 @@ function [s] = straineval (c, V0, V, strain='eulerian')
 % See also: strainfit.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: September 2010.
 %
 

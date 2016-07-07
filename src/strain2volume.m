@@ -26,7 +26,7 @@ function V = strain2volume(f, V0, strain='eulerian')
 % V: vector containing the volumes.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: October 2010
 
    if (nargin < 2 || nargin > 3)

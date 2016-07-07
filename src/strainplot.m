@@ -27,7 +27,7 @@ function strainplot (V,E,V0, c, strain='eulerian', fplot='plot.eps', type='v')
 % {type = 'v'}: select between E(V) (defaulf) or E(f) (option 'f') plots.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: September 2010
 
    if (nargin < 4)

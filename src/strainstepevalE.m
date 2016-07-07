@@ -33,7 +33,7 @@ function E = strainstepevalE (c, V0, step, V, strain = 'eulerian')
 % E: energy values.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: November 2010.
 %
    if (nargin < 4 )

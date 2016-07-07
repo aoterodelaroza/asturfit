@@ -25,7 +25,7 @@ function [V,E] = readEVdata (filename, LOG=1)
 %            LOG = 2  like 1 plus a complete list of the points read in.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: September 2010
 
   global nelectrons

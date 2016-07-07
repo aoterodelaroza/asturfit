@@ -44,7 +44,7 @@ function [c,s] = strainfit (V,E,V0, ndeg=4, strain='eulerian', LOG=0)
 %    s.err: 0 if no error.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: September 2010
 
    if (nargin < 3)

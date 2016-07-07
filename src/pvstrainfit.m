@@ -43,7 +43,7 @@ function [c,s] = pvstrainfit (p,V,Vref, ndeg=4, strain='eulerian', LOG=1)
 %    s.err: 0 if no error.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: January 2011
 
    if (nargin < 3)

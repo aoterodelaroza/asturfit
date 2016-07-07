@@ -43,7 +43,7 @@ function res = nlf(V, E, mode="none", pin=[], fit=1, LOG=1)
 %   res.R2 ...... determination coefficient (1 for a exact fitting).
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: November 2010
 
    global nelectrons

@@ -40,7 +40,7 @@ function s = errformatf(x, dx, nd=6)
 %   errformatf(-123.4567890123456,0.00000009734,8) -> -123.45678901(10)
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: November 2010
 %
    if (dx == 0)

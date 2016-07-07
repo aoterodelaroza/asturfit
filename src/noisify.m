@@ -38,7 +38,7 @@ function [xn,yn] = noisify (x, y, points=-0.1, xfac=0.1, yfac=0.1, LOG=0)
 % [xn,yn]: vectors containing the [x,y] data with added noise.
 %
 % Authors: VLC Victor Lua~na .......... <victor@carbono.quimica.uniovi.es>
-%          AOR Alberto Otero-de-la-Roza <alberto@carbono.quimica.uniovi.es>
+%          AOR Alberto Otero-de-la-Roza <aoterodelaroza@gmail.com>
 % Created: October 2010
 
    if (nargin < 2)
