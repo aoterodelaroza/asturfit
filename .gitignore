@@ -1,2 +1,10 @@
 # emacs backups
 *~
+
+# manual
+doc/*.conf
+doc/*.aux
+doc/*.log
+doc/*.toc
+doc/*.out
+doc/*.tex
