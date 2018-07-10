@@ -127,10 +127,6 @@ task includes:
      format useful for parsing with further programs, like gnuplot.
 
 
-.. figure:: asturfit.png
-   :align: center
-   :scale: 10
-
    The asturfit task automaticaly generates a set of the most useful
    plots.
 

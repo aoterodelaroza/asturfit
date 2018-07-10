@@ -10,7 +10,7 @@
 \usepackage{listings}
 \usepackage{url}
 \usepackage{amsmath}
-\usepackage[pdftex,margin=1.8cm,twosideshift=0pt,verbose=true]{geometry}
+\usepackage[pdftex,margin=1.8cm]{geometry}
 
 \usepackage{sectsty}
 \allsectionsfont{\sffamily}
@@ -180,5 +180,25 @@
      xleftmargin=1em,%
      lineskip=-1pt,%
      language=tessel,%
+     basicstyle=\ttfamily}
+}
+
+\newcommand{\gibbslist}{
+\lstset{%
+     inputencoding=utf8x,%
+     extendedchars=true,%
+     xleftmargin=0em,%
+     showstringspaces=false,%
+     backgroundcolor=\color{PaleYlBg},%
+     fillcolor=\color{PaleYlBg},%
+     frame=single,framerule=0pt,%
+     keywordstyle=\color{Brown}\bfseries,%
+     commentstyle=\color{Blue},%
+     numbers=left,%
+     stepnumber=1,%
+     numberstyle=\tiny,%
+     xleftmargin=1em,%
+     lineskip=-1pt,%
+     language=gibbs2,%
      basicstyle=\ttfamily}
 }
